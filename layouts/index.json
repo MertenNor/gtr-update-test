@@ -3,62 +3,446 @@
   "layouts": [
     {
       "id": "sample-01",
-      "name": "Read the Clipboard",
-      "game": "Any program",
-      "category": "Other",
-      "maker": "defunkt",
-      "version": 1,
-      "downloads": 1280,
-      "description": "Sample layout (made up). The simplest one: a hotkey that reads whatever you copied.",
+      "name": "Tactics RPG: Battle and Camp",
+      "game": "Sample Tactics RPG",
+      "category": "Games",
+      "maker": "MertenNor",
+      "version": 3,
+      "downloads": 1480,
+      "description": "Sample layout (made up). Who is up, their stats and the battle menu, and on the other tab the camp shop.",
       "screen": {
         "width": 1920,
         "height": 1080,
-        "mode": ""
+        "mode": "fullscreen"
       },
       "areas": [
         {
-          "name": "Clipboard",
-          "kind": "Clipboard",
-          "hotkey": "f8",
-          "region": null,
+          "name": "Unit Name",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            80,
+            60,
+            520,
+            70
+          ],
+          "page": 0
+        },
+        {
+          "name": "Unit Stats",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            80,
+            140,
+            520,
+            220
+          ],
+          "page": 0
+        },
+        {
+          "name": "Battle Menu",
+          "kind": "Read Area",
+          "hotkey": "numpad 3",
+          "region": [
+            1400,
+            640,
+            440,
+            360
+          ],
+          "page": 0
+        },
+        {
+          "name": "Battle Log",
+          "kind": "Read Area",
+          "hotkey": "numpad 4",
+          "region": [
+            560,
+            880,
+            800,
+            160
+          ],
+          "page": 0
+        },
+        {
+          "name": "Shop List",
+          "kind": "Read Area",
+          "hotkey": "f5",
+          "region": [
+            160,
+            200,
+            760,
+            640
+          ],
+          "page": 1
+        },
+        {
+          "name": "Shop Prices",
+          "kind": "Read Area",
+          "hotkey": "f6",
+          "region": [
+            960,
+            200,
+            400,
+            640
+          ],
+          "page": 1
+        }
+      ],
+      "pages": [
+        "Battle",
+        "Camp"
+      ],
+      "detections": [
+        [
+          900,
+          40,
+          120,
+          40
+        ]
+      ],
+      "detection_names": [
+        "Turn Starts"
+      ],
+      "automations": [
+        "Combo: Read the Unit (hotkey numpad 9)",
+        "Detection Area: Turn Starts"
+      ],
+      "translations": [],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ],
+        [
+          "kokoro",
+          "Kokoro"
+        ]
+      ],
+      "text_rules": [
+        "Text Replacement: 5 rules",
+        "Text Filters: Fix OCR mix-ups, Skip text already read"
+      ],
+      "text_rule_list": [
+        "HP \u2192 health",
+        "MP \u2192 mana",
+        "ATK \u2192 attack",
+        "DEF \u2192 defense",
+        "LV \u2192 level"
+      ],
+      "text_rules_note": "Spells out the short stat names, so HP is read as health.",
+      "automations_note": "One hotkey reads the unit's name and stats. A watched spot reads the name when a turn starts.",
+      "uses": [
+        "Voice: Piper: Amy",
+        "Voice: Kokoro: Heart"
+      ],
+      "tags": [
+        "6 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_01.json",
+      "sha256": "451f6d34659e02435ecbb55168b2483be48e0b5601cf0686bb2f145f2a04e430",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-02",
+      "name": "Visual Novel in Japanese",
+      "game": "Sample Visual Novel",
+      "category": "Games",
+      "maker": "octocat",
+      "version": 2,
+      "downloads": 322,
+      "description": "Sample layout (made up). The speaker and the line, read in English as each new line shows up, with the choices on a hotkey.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Speaker",
+          "kind": "Read Area",
+          "hotkey": "numpad 5",
+          "region": [
+            200,
+            760,
+            420,
+            60
+          ],
+          "page": 0
+        },
+        {
+          "name": "Line",
+          "kind": "Read Area",
+          "hotkey": "numpad 6",
+          "region": [
+            200,
+            830,
+            1520,
+            200
+          ],
+          "page": 0
+        },
+        {
+          "name": "Choices",
+          "kind": "Read Area",
+          "hotkey": "numpad 7",
+          "region": [
+            560,
+            280,
+            800,
+            420
+          ],
           "page": 0
         }
       ],
       "pages": [
         "Tab 1"
       ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "Clipboard"
+      "detections": [
+        [
+          1740,
+          1000,
+          80,
+          40
+        ]
       ],
-      "file": "layouts/sample_01.json",
-      "sha256": "5e9559feed7b53a630ac6445d95e3dd9e6d43e6366a184930f3b526448f9b605",
+      "detection_names": [
+        "New Line"
+      ],
+      "automations": [
+        "Detection Area: New Line",
+        "Starts monitoring with novel.exe"
+      ],
+      "translations": [
+        "Speaker: from Japanese to English",
+        "Line: from Japanese to English",
+        "Choices: from Japanese to English"
+      ],
+      "addons": [
+        [
+          "kokoro",
+          "Kokoro"
+        ],
+        [
+          "rapidocr",
+          "RapidOCR"
+        ],
+        [
+          "translator",
+          "Any translator"
+        ]
+      ],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups, Skip text already read, 2 ignored words"
+      ],
+      "text_rule_list": [
+        "san \u2192 Mr or Ms",
+        "sama \u2192 sir or madam"
+      ],
+      "text_rules_note": "Turns the honorifics into plain English and skips the Auto and Skip buttons.",
+      "automations_note": "Watches the little arrow at the corner of the text box and reads each new line by itself. Starts with the game.",
+      "uses": [
+        "Voice: Kokoro: Heart",
+        "OCR engine: rapid_ocr",
+        "Any translator"
+      ],
+      "tags": [
+        "3 Read Areas",
+        "1 Detection Area",
+        "Auto Monitoring",
+        "Translate",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_02.json",
+      "sha256": "82830db92815768f0411d781484276255a1ec3a05344eceb8314ee6e5751ac37",
       "added": "2026-11-07"
     },
     {
-      "id": "sample-02",
-      "name": "Pick a Spot and Hear It",
-      "game": "Any program",
-      "category": "Other",
-      "maker": "MertenNor",
+      "id": "sample-03",
+      "name": "Racing Game HUD",
+      "game": "Sample Racing Game",
+      "category": "Games",
+      "maker": "sindresorhus",
       "version": 1,
-      "downloads": 940,
-      "description": "Sample layout (made up). One hotkey: press it, drag over some text, hear it.",
+      "downloads": 906,
+      "description": "Sample layout (made up). Position, lap, speed and a warning when you drive the wrong way. One hotkey reads the race status.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "borderless"
+      },
+      "areas": [
+        {
+          "name": "Position",
+          "kind": "Read Area",
+          "hotkey": "f1",
+          "region": [
+            2200,
+            80,
+            260,
+            120
+          ],
+          "page": 0
+        },
+        {
+          "name": "Lap",
+          "kind": "Read Area",
+          "hotkey": "f2",
+          "region": [
+            2200,
+            200,
+            260,
+            80
+          ],
+          "page": 0
+        },
+        {
+          "name": "Speed",
+          "kind": "Read Area",
+          "hotkey": "f3",
+          "region": [
+            2160,
+            1240,
+            300,
+            100
+          ],
+          "page": 0
+        },
+        {
+          "name": "Warning",
+          "kind": "Read Area",
+          "hotkey": null,
+          "region": [
+            900,
+            160,
+            760,
+            100
+          ],
+          "page": 0
+        }
+      ],
+      "pages": [
+        "Tab 1"
+      ],
+      "detections": [
+        [
+          1180,
+          150,
+          200,
+          30
+        ]
+      ],
+      "detection_names": [
+        "Wrong Way"
+      ],
+      "automations": [
+        "Combo: Race Status (hotkey f4)",
+        "Detection Area: Wrong Way"
+      ],
+      "translations": [],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ],
+        [
+          "kokoro",
+          "Kokoro"
+        ]
+      ],
+      "text_rules": [
+        "Text Replacement: 4 rules",
+        "Text Filters: Fix OCR mix-ups, Read units in full"
+      ],
+      "text_rule_list": [
+        "1ST \u2192 first",
+        "2ND \u2192 second",
+        "3RD \u2192 third",
+        "KM/H \u2192 kilometers per hour"
+      ],
+      "text_rules_note": "Reads 1ST as first and KM/H as kilometers per hour.",
+      "automations_note": "One hotkey reads position, lap and speed. The wrong way warning is read at once.",
+      "uses": [
+        "Voice: Piper: Amy",
+        "Voice: Kokoro: Heart"
+      ],
+      "tags": [
+        "4 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_03.json",
+      "sha256": "5adf9f210ff57ce5b6b3992a10b81f1255bb545611437468a88c4855df60b368",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-04",
+      "name": "Roguelike Items and Log",
+      "game": "Sample Roguelike",
+      "category": "Games",
+      "maker": "addyosmani",
+      "version": 4,
+      "downloads": 211,
+      "description": "Sample layout (made up). The item you are on, its stats and the message log. Item pick-ups are read by themselves.",
       "screen": {
         "width": 1920,
         "height": 1080,
-        "mode": ""
+        "mode": "windowed"
       },
       "areas": [
+        {
+          "name": "Item Name",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            1300,
+            100,
+            560,
+            70
+          ],
+          "page": 0
+        },
+        {
+          "name": "Item Text",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            1300,
+            180,
+            560,
+            400
+          ],
+          "page": 0
+        },
+        {
+          "name": "Stats",
+          "kind": "Read Area",
+          "hotkey": "numpad 3",
+          "region": [
+            1300,
+            600,
+            560,
+            200
+          ],
+          "page": 0
+        },
+        {
+          "name": "Message Log",
+          "kind": "Read Area",
+          "hotkey": "numpad 4",
+          "region": [
+            40,
+            820,
+            1200,
+            220
+          ],
+          "page": 0
+        },
         {
           "name": "Quick Read Area 1",
           "kind": "Quick Read Area",
@@ -70,140 +454,189 @@
       "pages": [
         "Tab 1"
       ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
+      "detections": [
+        [
+          60,
+          780,
+          200,
+          30
+        ]
+      ],
+      "detection_names": [
+        "Item Picked Up"
+      ],
+      "automations": [
+        "Combo: Read the Item (hotkey numpad 9)",
+        "Detection Area: Item Picked Up"
+      ],
       "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "",
       "addons": [],
+      "text_rules": [
+        "Text Replacement: 4 rules",
+        "Text Filters: Fix OCR mix-ups, Skip gibberish"
+      ],
+      "text_rule_list": [
+        "+1 \u2192 plus one",
+        "+2 \u2192 plus two",
+        "STR \u2192 strength",
+        "DEX \u2192 dexterity"
+      ],
+      "text_rules_note": "Reads the stat bonuses as words, and skips the junk the item art makes.",
+      "automations_note": "One hotkey reads an item's name, text and stats. Picking an item up reads the message log.",
       "uses": [],
       "tags": [
-        "1 Quick Read Area"
-      ],
-      "file": "layouts/sample_02.json",
-      "sha256": "5cfa4640194f0c225671bceb836f7c7fa5e0a9af514cb82f37b9d5ebf7996bfe",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-03",
-      "name": "One Dialogue Box",
-      "game": "Sample RPG",
-      "category": "Games",
-      "maker": "octocat",
-      "version": 1,
-      "downloads": 615,
-      "description": "Sample layout (made up). One box over the dialogue at the bottom, one hotkey.",
-      "screen": {
-        "width": 1920,
-        "height": 1080,
-        "mode": "windowed"
-      },
-      "areas": [
-        {
-          "name": "Dialogue",
-          "kind": "Read Area",
-          "hotkey": "numpad 5",
-          "region": [
-            300,
-            780,
-            1320,
-            220
-          ],
-          "page": 0
-        }
-      ],
-      "pages": [
-        "Tab 1"
-      ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "1 Read Area"
-      ],
-      "file": "layouts/sample_03.json",
-      "sha256": "94e0b68cf13b2c7428f3415a69b4590b3fe02f08ae15d8f534a0b24a557efd41",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-04",
-      "name": "Dialogue and Menu",
-      "game": "Sample RPG",
-      "category": "Games",
-      "maker": "MertenNor",
-      "version": 1,
-      "downloads": 502,
-      "description": "Sample layout (made up). Two boxes: the dialogue at the bottom, and the menu at the left.",
-      "screen": {
-        "width": 1920,
-        "height": 1080,
-        "mode": "windowed"
-      },
-      "areas": [
-        {
-          "name": "Dialogue",
-          "kind": "Read Area",
-          "hotkey": "numpad 5",
-          "region": [
-            300,
-            780,
-            1320,
-            220
-          ],
-          "page": 0
-        },
-        {
-          "name": "Menu",
-          "kind": "Read Area",
-          "hotkey": "numpad 6",
-          "region": [
-            60,
-            120,
-            520,
-            600
-          ],
-          "page": 0
-        }
-      ],
-      "pages": [
-        "Tab 1"
-      ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "2 Read Areas"
+        "4 Read Areas",
+        "1 Quick Read Area",
+        "1 Combo",
+        "1 Detection Area",
+        "Text Replacement"
       ],
       "file": "layouts/sample_04.json",
-      "sha256": "7794e6f1f35d5d475726e99adcfa65409d724036d103d76c87d7241eab2e4189",
+      "sha256": "97d8f11a24e602540b569288203eda852bbfc6423f3d0f8f27ea9741f1fc5811",
       "added": "2026-11-07"
     },
     {
       "id": "sample-05",
-      "name": "Spreadsheet Cells",
+      "name": "Strategy Game Reports",
+      "game": "Sample Grand Strategy",
+      "category": "Games",
+      "maker": "torvalds",
+      "version": 2,
+      "downloads": 144,
+      "description": "Sample layout (made up). Three tabs for resources, events and diplomacy, and a watched spot for the event pop-up.",
+      "screen": {
+        "width": 3840,
+        "height": 2160,
+        "mode": "borderless"
+      },
+      "areas": [
+        {
+          "name": "Gold and Food",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            120,
+            40,
+            900,
+            80
+          ],
+          "page": 0
+        },
+        {
+          "name": "Income",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            1040,
+            40,
+            700,
+            80
+          ],
+          "page": 0
+        },
+        {
+          "name": "Event Title",
+          "kind": "Read Area",
+          "hotkey": "numpad 3",
+          "region": [
+            1300,
+            500,
+            1200,
+            120
+          ],
+          "page": 1
+        },
+        {
+          "name": "Event Text",
+          "kind": "Read Area",
+          "hotkey": "numpad 4",
+          "region": [
+            1300,
+            640,
+            1200,
+            700
+          ],
+          "page": 1
+        },
+        {
+          "name": "Country Name",
+          "kind": "Read Area",
+          "hotkey": "f5",
+          "region": [
+            400,
+            300,
+            800,
+            100
+          ],
+          "page": 2
+        },
+        {
+          "name": "Opinion",
+          "kind": "Read Area",
+          "hotkey": "f6",
+          "region": [
+            400,
+            420,
+            800,
+            300
+          ],
+          "page": 2
+        }
+      ],
+      "pages": [
+        "Resources",
+        "Events",
+        "Diplomacy"
+      ],
+      "detections": [
+        [
+          1800,
+          460,
+          200,
+          40
+        ]
+      ],
+      "detection_names": [
+        "Event Pop-up"
+      ],
+      "automations": [
+        "Combo: Read the Event (hotkey numpad 9)",
+        "Detection Area: Event Pop-up",
+        "Starts monitoring with grandstrategy.exe"
+      ],
+      "translations": [],
+      "addons": [],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups"
+      ],
+      "text_rule_list": [
+        "K \u2192 thousand",
+        "M \u2192 million"
+      ],
+      "text_rules_note": "Reads K and M as thousand and million.",
+      "automations_note": "A watched spot reads the event when its pop-up shows up, and a hotkey reads it again. Starts with the game.",
+      "uses": [],
+      "tags": [
+        "6 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
+        "Auto Monitoring",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_05.json",
+      "sha256": "e05e404743a6a00b5d2f05457af1b5c045cd4b57a3492db424238724760458b6",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-06",
+      "name": "Spreadsheet Review",
       "game": "A spreadsheet program",
       "category": "Programs",
       "maker": "kentcdodds",
-      "version": 1,
-      "downloads": 311,
-      "description": "Sample layout (made up). The cell you are in, the formula bar, and a spot you pick yourself.",
+      "version": 3,
+      "downloads": 1105,
+      "description": "Sample layout (made up). The cell, its formula and the sheet name, with formulas read as words.",
       "screen": {
         "width": 1920,
         "height": 1080,
@@ -235,73 +668,26 @@
           "page": 0
         },
         {
-          "name": "Quick Read Area 1",
-          "kind": "Quick Read Area",
-          "hotkey": "numpad 0",
-          "region": null,
-          "page": 0
-        }
-      ],
-      "pages": [
-        "Tab 1"
-      ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
-      "translations": [],
-      "text_rules": [
-        "Text Replacement: 3 rules",
-        "Text Filters: Fix OCR mix-ups, Read units in full"
-      ],
-      "text_rule_list": [
-        "SUM \u2192 the sum of",
-        "AVG \u2192 the average of",
-        "IF \u2192 if"
-      ],
-      "text_rules_note": "Reads SUM, AVG and IF as words instead of spelling them out.",
-      "automations_note": "",
-      "addons": [
-        [
-          "piper",
-          "Piper"
-        ]
-      ],
-      "uses": [
-        "Voice: Piper: Amy"
-      ],
-      "tags": [
-        "2 Read Areas",
-        "1 Quick Read Area",
-        "Text Replacement"
-      ],
-      "file": "layouts/sample_05.json",
-      "sha256": "4e2074d244587d1fb8594e598301220e90f0568cb6a82188e5128a6a4b6106b8",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-06",
-      "name": "Subtitles in English",
-      "game": "Sample Shooter",
-      "category": "Games",
-      "maker": "sindresorhus",
-      "version": 1,
-      "downloads": 266,
-      "description": "Sample layout (made up). Subtitles at the bottom, read in English whatever language they are in.",
-      "screen": {
-        "width": 2560,
-        "height": 1440,
-        "mode": "fullscreen"
-      },
-      "areas": [
-        {
-          "name": "Subtitles",
+          "name": "Sheet Name",
           "kind": "Read Area",
-          "hotkey": "f9",
+          "hotkey": "numpad 3",
           "region": [
-            640,
-            1200,
-            1280,
-            160
+            60,
+            1000,
+            400,
+            40
+          ],
+          "page": 0
+        },
+        {
+          "name": "Status Bar",
+          "kind": "Read Area",
+          "hotkey": "numpad 4",
+          "region": [
+            500,
+            1040,
+            1000,
+            30
           ],
           "page": 0
         }
@@ -311,21 +697,333 @@
       ],
       "detections": [],
       "detection_names": [],
-      "automations": [],
-      "translations": [
-        "Subtitles: from Japanese to English"
+      "automations": [
+        "Combo: Cell and Formula (hotkey numpad 9)"
+      ],
+      "translations": [],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ]
       ],
       "text_rules": [
-        "Text Replacement: 2 rules",
-        "Text Filters: Fix OCR mix-ups, Skip text already read"
+        "Text Replacement: 4 rules",
+        "Text Filters: Fix OCR mix-ups, Read units in full"
       ],
       "text_rule_list": [
-        "[music] \u2192 (left out)",
-        "Mr. \u2192 Mister"
+        "SUM \u2192 the sum of",
+        "AVG \u2192 the average of",
+        "IF \u2192 if",
+        "VLOOKUP \u2192 look up"
       ],
-      "text_rules_note": "Takes out the [music] tags and writes Mr. out in full, so it is read as a word.",
-      "automations_note": "",
+      "text_rules_note": "Reads SUM, AVG, IF and VLOOKUP as words.",
+      "automations_note": "One hotkey reads the cell and then its formula.",
+      "uses": [
+        "Voice: Piper: Amy"
+      ],
+      "tags": [
+        "4 Read Areas",
+        "1 Combo",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_06.json",
+      "sha256": "b2f5a4dac8b8cfad8a7c4b48f0da3bcb7f245cf2d3923d0811ebc5e4cfefdb71",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-07",
+      "name": "Email Triage",
+      "game": "An email program",
+      "category": "Programs",
+      "maker": "gaearon",
+      "version": 1,
+      "downloads": 438,
+      "description": "Sample layout (made up). Sender, subject and preview of the mail you are on. Two tabs: the inbox and writing a message.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Sender",
+          "kind": "Read Area",
+          "hotkey": "f1",
+          "region": [
+            900,
+            260,
+            800,
+            60
+          ],
+          "page": 0
+        },
+        {
+          "name": "Subject",
+          "kind": "Read Area",
+          "hotkey": "f2",
+          "region": [
+            900,
+            330,
+            1400,
+            70
+          ],
+          "page": 0
+        },
+        {
+          "name": "Preview",
+          "kind": "Read Area",
+          "hotkey": "f3",
+          "region": [
+            900,
+            410,
+            1400,
+            500
+          ],
+          "page": 0
+        },
+        {
+          "name": "To",
+          "kind": "Read Area",
+          "hotkey": "f5",
+          "region": [
+            600,
+            200,
+            1200,
+            60
+          ],
+          "page": 1
+        },
+        {
+          "name": "Message Body",
+          "kind": "Read Area",
+          "hotkey": "f6",
+          "region": [
+            600,
+            300,
+            1600,
+            800
+          ],
+          "page": 1
+        }
+      ],
+      "pages": [
+        "Inbox",
+        "Writing"
+      ],
+      "detections": [
+        [
+          2380,
+          60,
+          100,
+          40
+        ]
+      ],
+      "detection_names": [
+        "New Mail"
+      ],
+      "automations": [
+        "Combo: Read the Mail (hotkey f4)",
+        "Detection Area: New Mail"
+      ],
+      "translations": [],
+      "addons": [],
+      "text_rules": [
+        "Text Replacement: 3 rules",
+        "Text Filters: Fix OCR mix-ups, 2 ignored words"
+      ],
+      "text_rule_list": [
+        "RE: \u2192 reply to",
+        "FWD: \u2192 forwarded",
+        "Inbox ( \u2192 Inbox, "
+      ],
+      "text_rules_note": "Reads RE: as reply to and FWD: as forwarded, and skips the unsubscribe links.",
+      "automations_note": "A watched spot reads the subject of new mail. One hotkey reads sender, subject and preview.",
+      "uses": [],
+      "tags": [
+        "5 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_07.json",
+      "sha256": "82ce58b529ea296f2f0ae2d8a13964422429eb2cca9eb8f7b383c4fed2ab991f",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-08",
+      "name": "Code Editor Errors",
+      "game": "A code editor",
+      "category": "Programs",
+      "maker": "tj",
+      "version": 2,
+      "downloads": 267,
+      "description": "Sample layout (made up). The error line, the terminal and the problems panel, with symbols read as words.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Error Line",
+          "kind": "Read Area",
+          "hotkey": "f9",
+          "region": [
+            200,
+            600,
+            1600,
+            60
+          ],
+          "page": 0
+        },
+        {
+          "name": "Terminal",
+          "kind": "Read Area",
+          "hotkey": "f10",
+          "region": [
+            200,
+            1000,
+            1800,
+            360
+          ],
+          "page": 0
+        },
+        {
+          "name": "Problems Panel",
+          "kind": "Read Area",
+          "hotkey": "f11",
+          "region": [
+            200,
+            700,
+            1800,
+            280
+          ],
+          "page": 0
+        }
+      ],
+      "pages": [
+        "Tab 1"
+      ],
+      "detections": [
+        [
+          2300,
+          1380,
+          120,
+          30
+        ]
+      ],
+      "detection_names": [
+        "Build Failed"
+      ],
+      "automations": [
+        "Combo: Read the Error (hotkey f12)",
+        "Detection Area: Build Failed"
+      ],
+      "translations": [],
+      "addons": [],
+      "text_rules": [
+        "Text Replacement: 5 rules",
+        "Text Filters: Skip text already read"
+      ],
+      "text_rule_list": [
+        "=> \u2192 arrow",
+        "!= \u2192 not equal to",
+        "== \u2192 equals",
+        "{ \u2192 open brace",
+        "} \u2192 close brace"
+      ],
+      "text_rules_note": "Reads the symbols as words, like => as arrow.",
+      "automations_note": "When the build fails, the terminal is read by itself. One hotkey reads the error and the problems panel.",
+      "uses": [],
+      "tags": [
+        "3 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
+        "Text Replacement"
+      ],
+      "file": "layouts/sample_08.json",
+      "sha256": "96f4fc089bf4dbccf5009acca96c98a03d5782342cd7fe7c81a22b79257a86ba",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-09",
+      "name": "Video Call Captions",
+      "game": "A video call program",
+      "category": "Programs",
+      "maker": "defunkt",
+      "version": 1,
+      "downloads": 189,
+      "description": "Sample layout (made up). Live captions read in English, with the speaker's name and the chat.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Captions",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            360,
+            860,
+            1200,
+            120
+          ],
+          "page": 0
+        },
+        {
+          "name": "Speaker Name",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            80,
+            80,
+            500,
+            60
+          ],
+          "page": 0
+        },
+        {
+          "name": "Chat",
+          "kind": "Read Area",
+          "hotkey": "numpad 3",
+          "region": [
+            1500,
+            200,
+            380,
+            600
+          ],
+          "page": 0
+        }
+      ],
+      "pages": [
+        "Tab 1"
+      ],
+      "detections": [
+        [
+          1700,
+          100,
+          80,
+          40
+        ]
+      ],
+      "detection_names": [
+        "Hand Raised"
+      ],
+      "automations": [
+        "Combo: Who Said What (hotkey numpad 9)",
+        "Detection Area: Hand Raised"
+      ],
+      "translations": [
+        "Captions: from Spanish to English"
+      ],
       "addons": [
+        [
+          "piper",
+          "Piper"
+        ],
         [
           "rapidocr",
           "RapidOCR"
@@ -335,31 +1033,44 @@
           "Any translator"
         ]
       ],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups, Skip text already read"
+      ],
+      "text_rule_list": [
+        "[Music] \u2192 (left out)",
+        "[Applause] \u2192 applause"
+      ],
+      "text_rules_note": "Takes out the [Music] tags.",
+      "automations_note": "A hotkey reads who is speaking and then what they said. A watched spot tells you when a hand is raised.",
       "uses": [
+        "Voice: Piper: Amy",
         "OCR engine: rapid_ocr",
         "Any translator"
       ],
       "tags": [
-        "1 Read Area",
+        "3 Read Areas",
+        "1 Combo",
+        "1 Detection Area",
         "Translate",
         "Text Replacement"
       ],
-      "file": "layouts/sample_06.json",
-      "sha256": "885b6d81c730e0260fa21581b7980abb64a1b00bad150765f9423a7229e300ae",
+      "file": "layouts/sample_09.json",
+      "sha256": "bc4114a8d74fc7c8bddd0fbf60234285e81ed061e9a173d0aea49e3371feb4fa",
       "added": "2026-11-07"
     },
     {
-      "id": "sample-07",
-      "name": "Chat, Names and Menus",
-      "game": "Sample Online Game",
-      "category": "Games",
-      "maker": "addyosmani",
+      "id": "sample-10",
+      "name": "Stream Chat and Alerts",
+      "game": "A streaming program",
+      "category": "Other",
+      "maker": "MertenNor",
       "version": 2,
-      "downloads": 158,
-      "description": "Sample layout (made up). Chat on the left, the name of what you target, and a menu, each with its own voice.",
+      "downloads": 73,
+      "description": "Sample layout (made up). The chat without the names, and the alert banner read as soon as it shows.",
       "screen": {
         "width": 1920,
-        "height": 1200,
+        "height": 1080,
         "mode": "windowed"
       },
       "areas": [
@@ -368,41 +1079,29 @@
           "kind": "Read Area",
           "hotkey": "f5",
           "region": [
-            20,
-            700,
-            560,
-            420
-          ],
-          "page": 0
-        },
-        {
-          "name": "Target Name",
-          "kind": "Read Area",
-          "hotkey": "f6",
-          "region": [
-            760,
-            20,
-            400,
-            60
-          ],
-          "page": 0
-        },
-        {
-          "name": "Menu",
-          "kind": "Read Area",
-          "hotkey": "f7",
-          "region": [
-            1500,
+            1400,
             200,
-            380,
+            480,
             700
+          ],
+          "page": 0
+        },
+        {
+          "name": "Alert Banner",
+          "kind": "Read Area",
+          "hotkey": null,
+          "region": [
+            600,
+            80,
+            700,
+            120
           ],
           "page": 0
         },
         {
           "name": "Quick Read Area 1",
           "kind": "Quick Read Area",
-          "hotkey": "f4",
+          "hotkey": "f6",
           "region": null,
           "page": 0
         }
@@ -410,19 +1109,22 @@
       "pages": [
         "Tab 1"
       ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [],
+      "detections": [
+        [
+          900,
+          60,
+          120,
+          30
+        ]
+      ],
+      "detection_names": [
+        "Alert Shows"
+      ],
+      "automations": [
+        "Detection Area: Alert Shows",
+        "Starts monitoring with streamer.exe"
+      ],
       "translations": [],
-      "text_rules": [
-        "Text Replacement: 1 rule",
-        "Text Filters: Fix OCR mix-ups, Skip chat names, 3 ignored words"
-      ],
-      "text_rule_list": [
-        "lol \u2192 laughing out loud"
-      ],
-      "text_rules_note": "Reads lol as words and skips the names in front of chat lines.",
-      "automations_note": "",
       "addons": [
         [
           "piper",
@@ -433,205 +1135,79 @@
           "Kokoro"
         ]
       ],
+      "text_rules": [
+        "Text Replacement: 3 rules",
+        "Text Filters: Fix OCR mix-ups, Skip chat names, 2 ignored words"
+      ],
+      "text_rule_list": [
+        "Kappa \u2192 ha",
+        "PogChamp \u2192 wow",
+        "LUL \u2192 laughing"
+      ],
+      "text_rules_note": "Reads the emotes as words and skips the names and the bot commands.",
+      "automations_note": "The alert banner is read as soon as it shows. Starts with the streaming program.",
       "uses": [
         "Voice: Piper: Amy",
         "Voice: Kokoro: Heart"
       ],
       "tags": [
-        "3 Read Areas",
+        "2 Read Areas",
         "1 Quick Read Area",
+        "1 Detection Area",
+        "Auto Monitoring",
         "Text Replacement"
       ],
-      "file": "layouts/sample_07.json",
-      "sha256": "4d71c5fd1f618d7cd00cd51a0c3f9d2db10a1614baa6879ab5ea777b08a47ef5",
+      "file": "layouts/sample_10.json",
+      "sha256": "914dee7c891fe3b74e06c207404c5be03f65320a724e5c02840a47cf3a1636fd",
       "added": "2026-11-07"
     },
     {
-      "id": "sample-08",
-      "name": "Read the Whole Quest",
-      "game": "Sample Strategy",
-      "category": "Games",
-      "maker": "torvalds",
+      "id": "sample-11",
+      "name": "Study Flashcards",
+      "game": "A flashcard program",
+      "category": "Other",
+      "maker": "yyx990803",
       "version": 1,
-      "downloads": 121,
-      "description": "Sample layout (made up). Three boxes, and one combo that reads the title and the text one after the other.",
+      "downloads": 521,
+      "description": "Sample layout (made up). Question, hint and answer, and a combo that reads the question and then the answer.",
       "screen": {
-        "width": 3840,
-        "height": 2160,
-        "mode": "borderless"
-      },
-      "areas": [
-        {
-          "name": "Quest Title",
-          "kind": "Read Area",
-          "hotkey": "numpad 1",
-          "region": [
-            120,
-            160,
-            900,
-            120
-          ],
-          "page": 0
-        },
-        {
-          "name": "Quest Text",
-          "kind": "Read Area",
-          "hotkey": "numpad 2",
-          "region": [
-            120,
-            300,
-            1100,
-            900
-          ],
-          "page": 0
-        },
-        {
-          "name": "Map Name",
-          "kind": "Read Area",
-          "hotkey": "numpad 3",
-          "region": [
-            3200,
-            80,
-            560,
-            100
-          ],
-          "page": 0
-        }
-      ],
-      "pages": [
-        "Tab 1"
-      ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [
-        "Combo: Read the Quest (hotkey numpad 9)"
-      ],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "One hotkey reads the quest title and then its text, one after the other.",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "3 Read Areas",
-        "1 Combo"
-      ],
-      "file": "layouts/sample_08.json",
-      "sha256": "5bb5828533200a637e9deb51753a47e74dc9d256c27a60af5300774b3d051287",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-09",
-      "name": "Chat Program, Two Windows",
-      "game": "A chat program",
-      "category": "Programs",
-      "maker": "tj",
-      "version": 2,
-      "downloads": 87,
-      "description": "Sample layout (made up). Two tabs: one for the chat window, one for the settings window. A combo reads both chat boxes.",
-      "screen": {
-        "width": 2560,
-        "height": 1440,
+        "width": 1920,
+        "height": 1080,
         "mode": "windowed"
       },
       "areas": [
         {
-          "name": "Newest Message",
+          "name": "Question",
           "kind": "Read Area",
-          "hotkey": "f3",
+          "hotkey": "numpad 1",
           "region": [
-            700,
-            1100,
-            1200,
-            160
+            320,
+            260,
+            1280,
+            220
           ],
           "page": 0
         },
         {
-          "name": "Channel Name",
+          "name": "Hint",
           "kind": "Read Area",
-          "hotkey": "f4",
+          "hotkey": "numpad 2",
           "region": [
-            700,
-            60,
-            600,
-            60
+            320,
+            500,
+            1280,
+            100
           ],
           "page": 0
         },
         {
-          "name": "Setting Name",
+          "name": "Answer",
           "kind": "Read Area",
-          "hotkey": "numpad 7",
+          "hotkey": "numpad 3",
           "region": [
-            400,
-            300,
-            900,
-            80
-          ],
-          "page": 1
-        },
-        {
-          "name": "Setting Help",
-          "kind": "Read Area",
-          "hotkey": "numpad 8",
-          "region": [
-            400,
-            420,
-            900,
-            500
-          ],
-          "page": 1
-        }
-      ],
-      "pages": [
-        "Chat",
-        "Settings"
-      ],
-      "detections": [],
-      "detection_names": [],
-      "automations": [
-        "Combo: Read Both (hotkey f2)"
-      ],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "One hotkey reads the channel name and then the newest message.",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "4 Read Areas",
-        "1 Combo"
-      ],
-      "file": "layouts/sample_09.json",
-      "sha256": "5a5dc455198cc4dd609d5102fa80d20a9f2b9cf8a5bce0596fb4f9ff5188a7fe",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-10",
-      "name": "Pop-ups That Read Themselves",
-      "game": "Sample Adventure",
-      "category": "Games",
-      "maker": "gaearon",
-      "version": 1,
-      "downloads": 54,
-      "description": "Sample layout (made up). Reads a pop-up by itself when it shows up. Starts when the game does.",
-      "screen": {
-        "width": 2560,
-        "height": 1080,
-        "mode": "borderless"
-      },
-      "areas": [
-        {
-          "name": "Popup Text",
-          "kind": "Read Area",
-          "hotkey": null,
-          "region": [
-            880,
-            380,
-            800,
+            320,
+            640,
+            1280,
             300
           ],
           "page": 0
@@ -642,239 +1218,99 @@
       ],
       "detections": [
         [
-          1180,
-          330,
-          200,
-          40
-        ]
-      ],
-      "detection_names": [
-        "Popup Shows"
-      ],
-      "automations": [
-        "Detection Area: Popup Shows",
-        "Starts monitoring with adventure.exe"
-      ],
-      "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "Watches for the pop-up to show up and reads it by itself. Monitoring starts when the game does.",
-      "addons": [],
-      "uses": [],
-      "tags": [
-        "1 Read Area",
-        "1 Detection Area",
-        "Auto Monitoring"
-      ],
-      "file": "layouts/sample_10.json",
-      "sha256": "5a957eb2a03efcf8c5da56752772f8dee44b4b3ac752f56a37b910909e019ba8",
-      "added": "2026-11-07"
-    },
-    {
-      "id": "sample-11",
-      "name": "Boss and Loot Alerts",
-      "game": "Sample Action RPG",
-      "category": "Games",
-      "maker": "MertenNor",
-      "version": 3,
-      "downloads": 19,
-      "description": "Sample layout (made up). Two spots that are watched: a boss name and a loot drop. Each one reads its own box, and one hotkey reads both.",
-      "screen": {
-        "width": 2560,
-        "height": 1440,
-        "mode": "fullscreen"
-      },
-      "areas": [
-        {
-          "name": "Boss Name",
-          "kind": "Read Area",
-          "hotkey": "numpad 4",
-          "region": [
-            900,
-            120,
-            760,
-            80
-          ],
-          "page": 0
-        },
-        {
-          "name": "Loot",
-          "kind": "Read Area",
-          "hotkey": "numpad 5",
-          "region": [
-            1000,
-            1000,
-            560,
-            240
-          ],
-          "page": 0
-        }
-      ],
-      "pages": [
-        "Tab 1"
-      ],
-      "detections": [
-        [
-          1180,
-          90,
-          200,
-          40
-        ],
-        [
-          1220,
-          960,
+          900,
+          980,
           120,
-          40
+          30
         ]
       ],
       "detection_names": [
-        "Boss Appears",
-        "Loot Drops"
+        "Card Flipped"
       ],
       "automations": [
-        "Combo: Read Both (hotkey numpad 9)",
-        "Detection Area: Boss Appears",
-        "Detection Area: Loot Drops"
+        "Combo: Question and Answer (hotkey numpad 9)",
+        "Detection Area: Card Flipped"
       ],
       "translations": [],
-      "text_rules": [],
-      "text_rule_list": [],
-      "text_rules_note": "",
-      "automations_note": "Watches two spots: a boss name and a loot drop. Each one reads its own box, and one hotkey reads both.",
       "addons": [
         [
           "kokoro",
           "Kokoro"
-        ],
-        [
-          "piper",
-          "Piper"
         ]
       ],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups"
+      ],
+      "text_rule_list": [
+        "e.g. \u2192 for example",
+        "i.e. \u2192 that is"
+      ],
+      "text_rules_note": "Reads e.g. and i.e. in full.",
+      "automations_note": "One hotkey reads the question and then the answer. Turning a card is noticed by itself.",
       "uses": [
-        "Voice: Kokoro: Heart",
-        "Voice: Piper: Amy"
+        "Voice: Kokoro: Heart"
       ],
       "tags": [
-        "2 Read Areas",
+        "3 Read Areas",
         "1 Combo",
-        "2 Detection Areas"
+        "1 Detection Area",
+        "Text Replacement"
       ],
       "file": "layouts/sample_11.json",
-      "sha256": "81e6b9c3df25fc94d48846583db2fed6cc3bfffc80abf2420affa5c8722dd71f",
+      "sha256": "9110d570c01f9fcd83e1443e91bbf837179a8381324c52b11f5516d2bc34c730",
       "added": "2026-11-07"
     },
     {
       "id": "sample-12",
-      "name": "The Full Setup",
-      "game": "Sample Open World Game",
-      "category": "Games",
-      "maker": "torvalds",
-      "version": 4,
-      "downloads": 3,
-      "description": "Sample layout (made up). Three tabs, eight boxes, two combos, three watched spots, translation, voices and monitoring that starts with the game.",
+      "name": "Menus in Many Games",
+      "game": "Any game",
+      "category": "Other",
+      "maker": "antfu",
+      "version": 5,
+      "downloads": 3051,
+      "description": "Sample layout (made up). The menu title, the line you are on and its description, in English, with a spot you pick yourself.",
       "screen": {
-        "width": 3440,
-        "height": 1440,
-        "mode": "borderless"
+        "width": 1920,
+        "height": 1080,
+        "mode": "fullscreen"
       },
       "areas": [
         {
-          "name": "Dialogue",
+          "name": "Menu Title",
           "kind": "Read Area",
-          "hotkey": "numpad 5",
+          "hotkey": "numpad 7",
           "region": [
-            800,
-            1100,
-            1840,
-            240
-          ],
-          "page": 0
-        },
-        {
-          "name": "Speaker Name",
-          "kind": "Read Area",
-          "hotkey": "numpad 6",
-          "region": [
-            800,
-            1040,
-            600,
-            60
-          ],
-          "page": 0
-        },
-        {
-          "name": "Quest Title",
-          "kind": "Read Area",
-          "hotkey": "numpad 1",
-          "region": [
-            120,
             160,
-            900,
-            120
-          ],
-          "page": 1
-        },
-        {
-          "name": "Quest Text",
-          "kind": "Read Area",
-          "hotkey": "numpad 2",
-          "region": [
-            120,
-            300,
-            1100,
-            700
-          ],
-          "page": 1
-        },
-        {
-          "name": "Map Name",
-          "kind": "Read Area",
-          "hotkey": "numpad 3",
-          "region": [
-            2800,
             80,
-            560,
-            100
+            800,
+            90
           ],
-          "page": 1
+          "page": 0
         },
         {
-          "name": "Item Name",
+          "name": "Selected Line",
           "kind": "Read Area",
-          "hotkey": "f5",
+          "hotkey": "numpad 8",
           "region": [
-            200,
-            200,
-            700,
+            160,
+            300,
+            800,
             80
           ],
-          "page": 2
+          "page": 0
         },
         {
-          "name": "Item Text",
+          "name": "Line Description",
           "kind": "Read Area",
-          "hotkey": "f6",
+          "hotkey": "numpad 9",
           "region": [
-            200,
-            300,
-            1000,
-            600
+            160,
+            720,
+            1500,
+            200
           ],
-          "page": 2
-        },
-        {
-          "name": "Prices",
-          "kind": "Read Area",
-          "hotkey": "f7",
-          "region": [
-            1300,
-            300,
-            500,
-            600
-          ],
-          "page": 2
+          "page": 0
         },
         {
           "name": "Quick Read Area 1",
@@ -885,94 +1321,51 @@
         }
       ],
       "pages": [
-        "Talking",
-        "Quests",
-        "Items"
+        "Tab 1"
       ],
-      "detections": [
-        [
-          1500,
-          1060,
-          200,
-          40
-        ],
-        [
-          1500,
-          120,
-          220,
-          40
-        ],
-        [
-          250,
-          160,
-          200,
-          40
-        ]
-      ],
-      "detection_names": [
-        "Dialogue Shows",
-        "New Quest",
-        "Item Opened"
-      ],
+      "detections": [],
+      "detection_names": [],
       "automations": [
-        "Combo: Read the Quest (hotkey numpad 9)",
-        "Combo: Read an Item (hotkey f9)",
-        "Detection Area: Dialogue Shows",
-        "Detection Area: New Quest",
-        "Detection Area: Item Opened",
-        "Starts monitoring with openworld.exe"
+        "Combo: Line and Description (hotkey numpad 6)"
       ],
       "translations": [
-        "Dialogue: from the language set in Settings to English"
+        "Menu Title: from the language set in Settings to English",
+        "Selected Line: from the language set in Settings to English",
+        "Line Description: from the language set in Settings to English"
       ],
-      "text_rules": [
-        "Text Replacement: 5 rules",
-        "Text Filters: Fix OCR mix-ups, Skip text already read, Skip gibberish, 2 ignored words"
-      ],
-      "text_rule_list": [
-        "HP \u2192 health",
-        "MP \u2192 mana",
-        "XP \u2192 experience",
-        "lvl \u2192 level",
-        "x \u2192 times"
-      ],
-      "text_rules_note": "Spells out game words (HP, MP, XP, lvl) and skips words that are only buttons to press.",
-      "automations_note": "Combos read a quest or an item in one press. Three watched spots read a new line of dialogue, a new quest and an opened item by themselves. Monitoring starts when the game does.",
       "addons": [
-        [
-          "piper",
-          "Piper"
-        ],
         [
           "rapidocr",
           "RapidOCR"
-        ],
-        [
-          "kokoro",
-          "Kokoro"
         ],
         [
           "translator",
           "Any translator"
         ]
       ],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups, Skip gibberish"
+      ],
+      "text_rule_list": [
+        "OPTIONS \u2192 options",
+        "EXIT \u2192 exit game"
+      ],
+      "text_rules_note": "Reads the menu words in lower case, and skips letters that are only art.",
+      "automations_note": "One hotkey reads the line you are on and its description, in English.",
       "uses": [
-        "Voice: Piper: Amy",
-        "Voice: Kokoro: Heart",
         "OCR engine: rapid_ocr",
         "Any translator"
       ],
       "tags": [
-        "8 Read Areas",
+        "3 Read Areas",
         "1 Quick Read Area",
-        "2 Combos",
-        "3 Detection Areas",
-        "Auto Monitoring",
+        "1 Combo",
         "Translate",
         "Text Replacement"
       ],
       "file": "layouts/sample_12.json",
-      "sha256": "63454b828d03ae14b3cc3972700c9eff90665004b2751b53c5f9e2ad0604a2d7",
+      "sha256": "2923721d63dd748923d08092297c69390763c6d13b1c78bb66361a9492c83629",
       "added": "2026-11-07"
     }
   ]

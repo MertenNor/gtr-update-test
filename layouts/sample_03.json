@@ -6,16 +6,142 @@
   ],
   "areas": [
     {
-      "name": "Dialogue",
+      "name": "Position",
       "area_type": "read_area",
-      "hotkey": "numpad 5",
+      "hotkey": "f1",
       "region": [
-        300,
-        780,
-        1320,
-        220
+        2200,
+        80,
+        260,
+        120
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Lap",
+      "area_type": "read_area",
+      "hotkey": "f2",
+      "region": [
+        2200,
+        200,
+        260,
+        80
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Speed",
+      "area_type": "read_area",
+      "hotkey": "f3",
+      "region": [
+        2160,
+        1240,
+        300,
+        100
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Warning",
+      "area_type": "read_area",
+      "hotkey": null,
+      "region": [
+        900,
+        160,
+        760,
+        100
+      ],
+      "voice": "Kokoro: Heart",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -48,9 +174,74 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "1ST",
+        "replace": "first"
+      },
+      {
+        "find": "2ND",
+        "replace": "second"
+      },
+      {
+        "find": "3RD",
+        "replace": "third"
+      },
+      {
+        "find": "KM/H",
+        "replace": "kilometers per hour"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "unit_detection": true
+  },
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Race Status",
+        "hotkey": "f4",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Position"
+          },
+          {
+            "kind": "area",
+            "target": "Lap"
+          },
+          {
+            "kind": "area",
+            "target": "Speed"
+          }
+        ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Wrong Way",
+        "region": [
+          1180,
+          150,
+          200,
+          30
+        ],
+        "picture": "",
+        "target": "Warning",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ]
+  },
   "screen": {
-    "width": 1920,
-    "height": 1080,
-    "mode": "windowed"
+    "width": 2560,
+    "height": 1440,
+    "mode": "borderless"
   }
 }

@@ -6,13 +6,139 @@
   ],
   "areas": [
     {
-      "name": "Dialogue",
+      "name": "Item Name",
       "area_type": "read_area",
-      "hotkey": "numpad 5",
+      "hotkey": "numpad 1",
       "region": [
-        300,
-        780,
-        1320,
+        1300,
+        100,
+        560,
+        70
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Item Text",
+      "area_type": "read_area",
+      "hotkey": "numpad 2",
+      "region": [
+        1300,
+        180,
+        560,
+        400
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Stats",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        1300,
+        600,
+        560,
+        200
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Message Log",
+      "area_type": "read_area",
+      "hotkey": "numpad 4",
+      "region": [
+        40,
+        820,
+        1200,
         220
       ],
       "voice": null,
@@ -48,15 +174,10 @@
       "page": 0
     },
     {
-      "name": "Menu",
-      "area_type": "read_area",
-      "hotkey": "numpad 6",
-      "region": [
-        60,
-        120,
-        520,
-        600
-      ],
+      "name": "Quick Read Area 1",
+      "area_type": "quick_read",
+      "hotkey": "numpad 0",
+      "region": null,
       "voice": null,
       "speed": 100,
       "freeze_screen": false,
@@ -90,6 +211,71 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "+1",
+        "replace": "plus one"
+      },
+      {
+        "find": "+2",
+        "replace": "plus two"
+      },
+      {
+        "find": "STR",
+        "replace": "strength"
+      },
+      {
+        "find": "DEX",
+        "replace": "dexterity"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_gibberish": true
+  },
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Read the Item",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Item Name"
+          },
+          {
+            "kind": "area",
+            "target": "Item Text"
+          },
+          {
+            "kind": "area",
+            "target": "Stats"
+          }
+        ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Item Picked Up",
+        "region": [
+          60,
+          780,
+          200,
+          30
+        ],
+        "picture": "",
+        "target": "Message Log",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ]
+  },
   "screen": {
     "width": 1920,
     "height": 1080,

@@ -6,14 +6,14 @@
   ],
   "areas": [
     {
-      "name": "Boss Name",
+      "name": "Question",
       "area_type": "read_area",
-      "hotkey": "numpad 4",
+      "hotkey": "numpad 1",
       "region": [
-        900,
-        120,
-        760,
-        80
+        320,
+        260,
+        1280,
+        220
       ],
       "voice": "Kokoro: Heart",
       "speed": 100,
@@ -48,16 +48,58 @@
       "page": 0
     },
     {
-      "name": "Loot",
+      "name": "Hint",
       "area_type": "read_area",
-      "hotkey": "numpad 5",
+      "hotkey": "numpad 2",
       "region": [
-        1000,
-        1000,
-        560,
-        240
+        320,
+        500,
+        1280,
+        100
       ],
-      "voice": "Piper: Amy",
+      "voice": "Kokoro: Heart",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Answer",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        320,
+        640,
+        1280,
+        300
+      ],
+      "voice": "Kokoro: Heart",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -90,38 +132,26 @@
       "page": 0
     }
   ],
-  "automations": {
-    "detection_areas": [
+  "text_replacement": {
+    "rules": [
       {
-        "name": "Boss Appears",
-        "region": [
-          1180,
-          90,
-          200,
-          40
-        ],
-        "picture": "",
-        "target": "Boss Name",
-        "match_percent": 90,
-        "wait_ms": 0
+        "find": "e.g.",
+        "replace": "for example"
       },
       {
-        "name": "Loot Drops",
-        "region": [
-          1220,
-          960,
-          120,
-          40
-        ],
-        "picture": "",
-        "target": "Loot",
-        "match_percent": 90,
-        "wait_ms": 0
+        "find": "i.e.",
+        "replace": "that is"
       }
     ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true
+  },
+  "automations": {
     "area_combos": [
       {
-        "name": "Read Both",
+        "name": "Question and Answer",
         "hotkey": "numpad 9",
         "enabled": true,
         "repeat_seconds": 0,
@@ -129,19 +159,34 @@
         "steps": [
           {
             "kind": "area",
-            "target": "Boss Name"
+            "target": "Question"
           },
           {
             "kind": "area",
-            "target": "Loot"
+            "target": "Answer"
           }
         ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Card Flipped",
+        "region": [
+          900,
+          980,
+          120,
+          30
+        ],
+        "picture": "",
+        "target": "Answer",
+        "match_percent": 90,
+        "wait_ms": 0
       }
     ]
   },
   "screen": {
-    "width": 2560,
-    "height": 1440,
-    "mode": "fullscreen"
+    "width": 1920,
+    "height": 1080,
+    "mode": "windowed"
   }
 }

@@ -6,15 +6,94 @@
   ],
   "areas": [
     {
-      "name": "Popup Text",
+      "name": "Chat",
+      "area_type": "read_area",
+      "hotkey": "f5",
+      "region": [
+        1400,
+        200,
+        480,
+        700
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Alert Banner",
       "area_type": "read_area",
       "hotkey": null,
       "region": [
-        880,
-        380,
-        800,
-        300
+        600,
+        80,
+        700,
+        120
       ],
+      "voice": "Kokoro: Heart",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Quick Read Area 1",
+      "area_type": "quick_read",
+      "hotkey": "f6",
+      "region": null,
       "voice": null,
       "speed": 100,
       "freeze_screen": false,
@@ -48,28 +127,50 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "Kappa",
+        "replace": "ha"
+      },
+      {
+        "find": "PogChamp",
+        "replace": "wow"
+      },
+      {
+        "find": "LUL",
+        "replace": "laughing"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_usernames": true,
+    "ignored_words": "!commands, !discord"
+  },
   "automations": {
     "detection_areas": [
       {
-        "name": "Popup Shows",
+        "name": "Alert Shows",
         "region": [
-          1180,
-          330,
-          200,
-          40
+          900,
+          60,
+          120,
+          30
         ],
         "picture": "",
-        "target": "Popup Text",
+        "target": "Alert Banner",
         "match_percent": 90,
         "wait_ms": 0
       }
     ],
     "auto_monitor": true,
-    "auto_monitor_program": "adventure.exe"
+    "auto_monitor_program": "streamer.exe"
   },
   "screen": {
-    "width": 2560,
+    "width": 1920,
     "height": 1080,
-    "mode": "borderless"
+    "mode": "windowed"
   }
 }

@@ -2,22 +2,20 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Talking",
-    "Quests",
-    "Items"
+    "Tab 1"
   ],
   "areas": [
     {
-      "name": "Dialogue",
+      "name": "Menu Title",
       "area_type": "read_area",
-      "hotkey": "numpad 5",
+      "hotkey": "numpad 7",
       "region": [
+        160,
+        80,
         800,
-        1100,
-        1840,
-        240
+        90
       ],
-      "voice": "Piper: Amy",
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -50,181 +48,13 @@
       "page": 0
     },
     {
-      "name": "Speaker Name",
+      "name": "Selected Line",
       "area_type": "read_area",
-      "hotkey": "numpad 6",
+      "hotkey": "numpad 8",
       "region": [
-        800,
-        1040,
-        600,
-        60
-      ],
-      "voice": "Kokoro: Heart",
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 0
-    },
-    {
-      "name": "Quest Title",
-      "area_type": "read_area",
-      "hotkey": "numpad 1",
-      "region": [
-        120,
         160,
-        900,
-        120
-      ],
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 1
-    },
-    {
-      "name": "Quest Text",
-      "area_type": "read_area",
-      "hotkey": "numpad 2",
-      "region": [
-        120,
         300,
-        1100,
-        700
-      ],
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 1
-    },
-    {
-      "name": "Map Name",
-      "area_type": "read_area",
-      "hotkey": "numpad 3",
-      "region": [
-        2800,
-        80,
-        560,
-        100
-      ],
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 1
-    },
-    {
-      "name": "Item Name",
-      "area_type": "read_area",
-      "hotkey": "f5",
-      "region": [
-        200,
-        200,
-        700,
+        800,
         80
       ],
       "voice": null,
@@ -251,23 +81,23 @@
         "color_mask_invert": false
       },
       "box_color": null,
-      "translate": false,
+      "translate": true,
       "translate_from": "",
-      "translate_to": "",
+      "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 2
+      "ocr_engine": "rapid_ocr",
+      "page": 0
     },
     {
-      "name": "Item Text",
+      "name": "Line Description",
       "area_type": "read_area",
-      "hotkey": "f6",
+      "hotkey": "numpad 9",
       "region": [
-        200,
-        300,
-        1000,
-        600
+        160,
+        720,
+        1500,
+        200
       ],
       "voice": null,
       "speed": 100,
@@ -293,55 +123,13 @@
         "color_mask_invert": false
       },
       "box_color": null,
-      "translate": false,
+      "translate": true,
       "translate_from": "",
-      "translate_to": "",
+      "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 2
-    },
-    {
-      "name": "Prices",
-      "area_type": "read_area",
-      "hotkey": "f7",
-      "region": [
-        1300,
-        300,
-        500,
-        600
-      ],
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 2
+      "ocr_engine": "rapid_ocr",
+      "page": 0
     },
     {
       "name": "Quick Read Area 1",
@@ -384,122 +172,44 @@
   "text_replacement": {
     "rules": [
       {
-        "find": "HP",
-        "replace": "health"
+        "find": "OPTIONS",
+        "replace": "options"
       },
       {
-        "find": "MP",
-        "replace": "mana"
-      },
-      {
-        "find": "XP",
-        "replace": "experience"
-      },
-      {
-        "find": "lvl",
-        "replace": "level"
-      },
-      {
-        "find": "x",
-        "replace": "times"
+        "find": "EXIT",
+        "replace": "exit game"
       }
     ],
     "enabled": true
   },
   "text_filters": {
     "char_normalization": true,
-    "ignore_already_read": true,
-    "ignore_gibberish": true,
-    "ignored_words": "Press, Skip"
+    "ignore_gibberish": true
   },
   "automations": {
     "area_combos": [
       {
-        "name": "Read the Quest",
-        "hotkey": "numpad 9",
+        "name": "Line and Description",
+        "hotkey": "numpad 6",
         "enabled": true,
         "repeat_seconds": 0,
         "capture_first": false,
         "steps": [
           {
             "kind": "area",
-            "target": "Quest Title"
+            "target": "Selected Line"
           },
           {
             "kind": "area",
-            "target": "Quest Text"
-          }
-        ]
-      },
-      {
-        "name": "Read an Item",
-        "hotkey": "f9",
-        "enabled": true,
-        "repeat_seconds": 0,
-        "capture_first": false,
-        "steps": [
-          {
-            "kind": "area",
-            "target": "Item Name"
-          },
-          {
-            "kind": "area",
-            "target": "Item Text"
-          },
-          {
-            "kind": "area",
-            "target": "Prices"
+            "target": "Line Description"
           }
         ]
       }
-    ],
-    "detection_areas": [
-      {
-        "name": "Dialogue Shows",
-        "region": [
-          1500,
-          1060,
-          200,
-          40
-        ],
-        "picture": "",
-        "target": "Dialogue",
-        "match_percent": 90,
-        "wait_ms": 0
-      },
-      {
-        "name": "New Quest",
-        "region": [
-          1500,
-          120,
-          220,
-          40
-        ],
-        "picture": "",
-        "target": "Quest Title",
-        "match_percent": 90,
-        "wait_ms": 0
-      },
-      {
-        "name": "Item Opened",
-        "region": [
-          250,
-          160,
-          200,
-          40
-        ],
-        "picture": "",
-        "target": "Item Name",
-        "match_percent": 90,
-        "wait_ms": 0
-      }
-    ],
-    "auto_monitor": true,
-    "auto_monitor_program": "openworld.exe"
+    ]
   },
   "screen": {
-    "width": 3440,
-    "height": 1440,
-    "mode": "borderless"
+    "width": 1920,
+    "height": 1080,
+    "mode": "fullscreen"
   }
 }

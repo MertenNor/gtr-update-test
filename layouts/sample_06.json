@@ -6,16 +6,16 @@
   ],
   "areas": [
     {
-      "name": "Subtitles",
+      "name": "Cell",
       "area_type": "read_area",
-      "hotkey": "f9",
+      "hotkey": "numpad 1",
       "region": [
-        640,
-        1200,
-        1280,
-        160
+        100,
+        180,
+        300,
+        60
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -39,35 +39,190 @@
         "color_mask_invert": false
       },
       "box_color": null,
-      "translate": true,
-      "translate_from": "ja",
-      "translate_to": "en",
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "rapid_ocr",
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Formula Bar",
+      "area_type": "read_area",
+      "hotkey": "numpad 2",
+      "region": [
+        420,
+        140,
+        1200,
+        50
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Sheet Name",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        60,
+        1000,
+        400,
+        40
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Status Bar",
+      "area_type": "read_area",
+      "hotkey": "numpad 4",
+      "region": [
+        500,
+        1040,
+        1000,
+        30
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
       "page": 0
     }
   ],
   "text_replacement": {
     "rules": [
       {
-        "find": "[music]",
-        "replace": ""
+        "find": "SUM",
+        "replace": "the sum of"
       },
       {
-        "find": "Mr.",
-        "replace": "Mister"
+        "find": "AVG",
+        "replace": "the average of"
+      },
+      {
+        "find": "IF",
+        "replace": "if"
+      },
+      {
+        "find": "VLOOKUP",
+        "replace": "look up"
       }
     ],
     "enabled": true
   },
   "text_filters": {
     "char_normalization": true,
-    "ignore_already_read": true
+    "unit_detection": true
+  },
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Cell and Formula",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Cell"
+          },
+          {
+            "kind": "area",
+            "target": "Formula Bar"
+          }
+        ]
+      }
+    ]
   },
   "screen": {
-    "width": 2560,
-    "height": 1440,
-    "mode": "fullscreen"
+    "width": 1920,
+    "height": 1080,
+    "mode": "windowed"
   }
 }

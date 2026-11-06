@@ -2,14 +2,188 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Tab 1"
+    "Battle",
+    "Camp"
   ],
   "areas": [
     {
-      "name": "Clipboard",
-      "area_type": "quick_read",
-      "hotkey": "f8",
-      "region": null,
+      "name": "Unit Name",
+      "area_type": "read_area",
+      "hotkey": "numpad 1",
+      "region": [
+        80,
+        60,
+        520,
+        70
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Unit Stats",
+      "area_type": "read_area",
+      "hotkey": "numpad 2",
+      "region": [
+        80,
+        140,
+        520,
+        220
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Battle Menu",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        1400,
+        640,
+        440,
+        360
+      ],
+      "voice": "Piper: Amy",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Battle Log",
+      "area_type": "read_area",
+      "hotkey": "numpad 4",
+      "region": [
+        560,
+        880,
+        800,
+        160
+      ],
+      "voice": "Kokoro: Heart",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Shop List",
+      "area_type": "read_area",
+      "hotkey": "f5",
+      "region": [
+        160,
+        200,
+        760,
+        640
+      ],
       "voice": null,
       "speed": 100,
       "freeze_screen": false,
@@ -38,14 +212,121 @@
       "translate_from": "",
       "translate_to": "",
       "translate_hint": "",
-      "read_clipboard": true,
+      "read_clipboard": false,
       "ocr_engine": "",
-      "page": 0
+      "page": 1
+    },
+    {
+      "name": "Shop Prices",
+      "area_type": "read_area",
+      "hotkey": "f6",
+      "region": [
+        960,
+        200,
+        400,
+        640
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 1
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "HP",
+        "replace": "health"
+      },
+      {
+        "find": "MP",
+        "replace": "mana"
+      },
+      {
+        "find": "ATK",
+        "replace": "attack"
+      },
+      {
+        "find": "DEF",
+        "replace": "defense"
+      },
+      {
+        "find": "LV",
+        "replace": "level"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_already_read": true
+  },
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Read the Unit",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Unit Name"
+          },
+          {
+            "kind": "area",
+            "target": "Unit Stats"
+          }
+        ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Turn Starts",
+        "region": [
+          900,
+          40,
+          120,
+          40
+        ],
+        "picture": "",
+        "target": "Unit Name",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ]
+  },
   "screen": {
     "width": 1920,
     "height": 1080,
-    "mode": ""
+    "mode": "fullscreen"
   }
 }

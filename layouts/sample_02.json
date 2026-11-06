@@ -6,11 +6,16 @@
   ],
   "areas": [
     {
-      "name": "Quick Read Area 1",
-      "area_type": "quick_read",
-      "hotkey": "numpad 0",
-      "region": null,
-      "voice": null,
+      "name": "Speaker",
+      "area_type": "read_area",
+      "hotkey": "numpad 5",
+      "region": [
+        200,
+        760,
+        420,
+        60
+      ],
+      "voice": "Kokoro: Heart",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -34,18 +39,139 @@
         "color_mask_invert": false
       },
       "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
+      "translate": true,
+      "translate_from": "ja",
+      "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "",
+      "ocr_engine": "rapid_ocr",
+      "page": 0
+    },
+    {
+      "name": "Line",
+      "area_type": "read_area",
+      "hotkey": "numpad 6",
+      "region": [
+        200,
+        830,
+        1520,
+        200
+      ],
+      "voice": "Kokoro: Heart",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": true,
+      "translate_from": "ja",
+      "translate_to": "en",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "rapid_ocr",
+      "page": 0
+    },
+    {
+      "name": "Choices",
+      "area_type": "read_area",
+      "hotkey": "numpad 7",
+      "region": [
+        560,
+        280,
+        800,
+        420
+      ],
+      "voice": "Kokoro: Heart",
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": true,
+      "translate_from": "ja",
+      "translate_to": "en",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "rapid_ocr",
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "san",
+        "replace": "Mr or Ms"
+      },
+      {
+        "find": "sama",
+        "replace": "sir or madam"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_already_read": true,
+    "ignored_words": "Auto, Skip"
+  },
+  "automations": {
+    "detection_areas": [
+      {
+        "name": "New Line",
+        "region": [
+          1740,
+          1000,
+          80,
+          40
+        ],
+        "picture": "",
+        "target": "Line",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ],
+    "auto_monitor": true,
+    "auto_monitor_program": "novel.exe"
+  },
   "screen": {
     "width": 1920,
     "height": 1080,
-    "mode": ""
+    "mode": "windowed"
   }
 }

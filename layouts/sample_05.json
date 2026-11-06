@@ -2,20 +2,22 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Tab 1"
+    "Resources",
+    "Events",
+    "Diplomacy"
   ],
   "areas": [
     {
-      "name": "Cell",
+      "name": "Gold and Food",
       "area_type": "read_area",
       "hotkey": "numpad 1",
       "region": [
-        100,
-        180,
-        300,
-        60
+        120,
+        40,
+        900,
+        80
       ],
-      "voice": "Piper: Amy",
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -48,16 +50,16 @@
       "page": 0
     },
     {
-      "name": "Formula Bar",
+      "name": "Income",
       "area_type": "read_area",
       "hotkey": "numpad 2",
       "region": [
-        420,
-        140,
-        1200,
-        50
+        1040,
+        40,
+        700,
+        80
       ],
-      "voice": "Piper: Amy",
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -90,11 +92,16 @@
       "page": 0
     },
     {
-      "name": "Quick Read Area 1",
-      "area_type": "quick_read",
-      "hotkey": "numpad 0",
-      "region": null,
-      "voice": "Piper: Amy",
+      "name": "Event Title",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        1300,
+        500,
+        1200,
+        120
+      ],
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -124,33 +131,193 @@
       "translate_hint": "",
       "read_clipboard": false,
       "ocr_engine": "",
-      "page": 0
+      "page": 1
+    },
+    {
+      "name": "Event Text",
+      "area_type": "read_area",
+      "hotkey": "numpad 4",
+      "region": [
+        1300,
+        640,
+        1200,
+        700
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 1
+    },
+    {
+      "name": "Country Name",
+      "area_type": "read_area",
+      "hotkey": "f5",
+      "region": [
+        400,
+        300,
+        800,
+        100
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 2
+    },
+    {
+      "name": "Opinion",
+      "area_type": "read_area",
+      "hotkey": "f6",
+      "region": [
+        400,
+        420,
+        800,
+        300
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 2
     }
   ],
   "text_replacement": {
     "rules": [
       {
-        "find": "SUM",
-        "replace": "the sum of"
+        "find": "K",
+        "replace": "thousand"
       },
       {
-        "find": "AVG",
-        "replace": "the average of"
-      },
-      {
-        "find": "IF",
-        "replace": "if"
+        "find": "M",
+        "replace": "million"
       }
     ],
     "enabled": true
   },
   "text_filters": {
     "char_normalization": true,
-    "unit_detection": true
+    "letters_only": false
+  },
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Read the Event",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Event Title"
+          },
+          {
+            "kind": "area",
+            "target": "Event Text"
+          }
+        ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Event Pop-up",
+        "region": [
+          1800,
+          460,
+          200,
+          40
+        ],
+        "picture": "",
+        "target": "Event Title",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ],
+    "auto_monitor": true,
+    "auto_monitor_program": "grandstrategy.exe"
   },
   "screen": {
-    "width": 1920,
-    "height": 1080,
-    "mode": "windowed"
+    "width": 3840,
+    "height": 2160,
+    "mode": "borderless"
   }
 }

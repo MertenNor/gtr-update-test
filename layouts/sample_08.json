@@ -6,14 +6,14 @@
   ],
   "areas": [
     {
-      "name": "Quest Title",
+      "name": "Error Line",
       "area_type": "read_area",
-      "hotkey": "numpad 1",
+      "hotkey": "f9",
       "region": [
-        120,
-        160,
-        900,
-        120
+        200,
+        600,
+        1600,
+        60
       ],
       "voice": null,
       "speed": 100,
@@ -48,14 +48,14 @@
       "page": 0
     },
     {
-      "name": "Quest Text",
+      "name": "Terminal",
       "area_type": "read_area",
-      "hotkey": "numpad 2",
+      "hotkey": "f10",
       "region": [
-        120,
-        300,
-        1100,
-        900
+        200,
+        1000,
+        1800,
+        360
       ],
       "voice": null,
       "speed": 100,
@@ -90,14 +90,14 @@
       "page": 0
     },
     {
-      "name": "Map Name",
+      "name": "Problems Panel",
       "area_type": "read_area",
-      "hotkey": "numpad 3",
+      "hotkey": "f11",
       "region": [
-        3200,
-        80,
-        560,
-        100
+        200,
+        700,
+        1800,
+        280
       ],
       "voice": null,
       "speed": 100,
@@ -132,30 +132,74 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "=>",
+        "replace": "arrow"
+      },
+      {
+        "find": "!=",
+        "replace": "not equal to"
+      },
+      {
+        "find": "==",
+        "replace": "equals"
+      },
+      {
+        "find": "{",
+        "replace": "open brace"
+      },
+      {
+        "find": "}",
+        "replace": "close brace"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": false,
+    "ignore_already_read": true
+  },
   "automations": {
     "area_combos": [
       {
-        "name": "Read the Quest",
-        "hotkey": "numpad 9",
+        "name": "Read the Error",
+        "hotkey": "f12",
         "enabled": true,
         "repeat_seconds": 0,
         "capture_first": false,
         "steps": [
           {
             "kind": "area",
-            "target": "Quest Title"
+            "target": "Error Line"
           },
           {
             "kind": "area",
-            "target": "Quest Text"
+            "target": "Problems Panel"
           }
         ]
+      }
+    ],
+    "detection_areas": [
+      {
+        "name": "Build Failed",
+        "region": [
+          2300,
+          1380,
+          120,
+          30
+        ],
+        "picture": "",
+        "target": "Terminal",
+        "match_percent": 90,
+        "wait_ms": 0
       }
     ]
   },
   "screen": {
-    "width": 3840,
-    "height": 2160,
-    "mode": "borderless"
+    "width": 2560,
+    "height": 1440,
+    "mode": "windowed"
   }
 }

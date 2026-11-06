@@ -2,21 +2,20 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Chat",
-    "Settings"
+    "Tab 1"
   ],
   "areas": [
     {
-      "name": "Newest Message",
+      "name": "Captions",
       "area_type": "read_area",
-      "hotkey": "f3",
+      "hotkey": "numpad 1",
       "region": [
-        700,
-        1100,
+        360,
+        860,
         1200,
-        160
+        120
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -40,25 +39,25 @@
         "color_mask_invert": false
       },
       "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
+      "translate": true,
+      "translate_from": "es",
+      "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "",
+      "ocr_engine": "rapid_ocr",
       "page": 0
     },
     {
-      "name": "Channel Name",
+      "name": "Speaker Name",
       "area_type": "read_area",
-      "hotkey": "f4",
+      "hotkey": "numpad 2",
       "region": [
-        700,
-        60,
-        600,
+        80,
+        80,
+        500,
         60
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -91,16 +90,16 @@
       "page": 0
     },
     {
-      "name": "Setting Name",
+      "name": "Chat",
       "area_type": "read_area",
-      "hotkey": "numpad 7",
+      "hotkey": "numpad 3",
       "region": [
-        400,
-        300,
-        900,
-        80
+        1500,
+        200,
+        380,
+        600
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -130,75 +129,65 @@
       "translate_hint": "",
       "read_clipboard": false,
       "ocr_engine": "",
-      "page": 1
-    },
-    {
-      "name": "Setting Help",
-      "area_type": "read_area",
-      "hotkey": "numpad 8",
-      "region": [
-        400,
-        420,
-        900,
-        500
-      ],
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 1
+      "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "[Music]",
+        "replace": ""
+      },
+      {
+        "find": "[Applause]",
+        "replace": "applause"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_already_read": true
+  },
   "automations": {
+    "detection_areas": [
+      {
+        "name": "Hand Raised",
+        "region": [
+          1700,
+          100,
+          80,
+          40
+        ],
+        "picture": "",
+        "target": "Speaker Name",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ],
     "area_combos": [
       {
-        "name": "Read Both",
-        "hotkey": "f2",
+        "name": "Who Said What",
+        "hotkey": "numpad 9",
         "enabled": true,
         "repeat_seconds": 0,
         "capture_first": false,
         "steps": [
           {
             "kind": "area",
-            "target": "Channel Name"
+            "target": "Speaker Name"
           },
           {
             "kind": "area",
-            "target": "Newest Message"
+            "target": "Captions"
           }
         ]
       }
     ]
   },
   "screen": {
-    "width": 2560,
-    "height": 1440,
+    "width": 1920,
+    "height": 1080,
     "mode": "windowed"
   }
 }
