@@ -1,4 +1,259 @@
 {
   "version": 1,
-  "layouts": []
+  "layouts": [
+    {
+      "id": "sample-1",
+      "name": "Dialogue and Menus",
+      "game": "Sample RPG",
+      "maker": "MertenNor",
+      "description": "Sample layout (made up). Reads the dialogue box at the bottom, and the menu item you point at.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Dialogue",
+          "kind": "Read Area",
+          "hotkey": "numpad 5",
+          "region": [
+            300,
+            780,
+            1320,
+            220
+          ]
+        },
+        {
+          "name": "Menu",
+          "kind": "Read Area",
+          "hotkey": "numpad 6",
+          "region": [
+            60,
+            120,
+            520,
+            600
+          ]
+        },
+        {
+          "name": "Quick Read Area 1",
+          "kind": "Quick Read Area",
+          "hotkey": "numpad 0",
+          "region": null
+        }
+      ],
+      "automations": [],
+      "tags": [
+        "2 Read Areas",
+        "1 Quick Read Area"
+      ],
+      "file": "layouts/sample_1.json",
+      "sha256": "ec24be88bac80393761662c6262bf4294329937bd23cbaa2887d12c9fd5b6495",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-2",
+      "name": "Subtitles",
+      "game": "Sample Shooter",
+      "maker": "octocat",
+      "description": "Sample layout (made up). Subtitles at the bottom center, translated to English.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "fullscreen"
+      },
+      "areas": [
+        {
+          "name": "Subtitles",
+          "kind": "Read Area",
+          "hotkey": "f9",
+          "region": [
+            640,
+            1200,
+            1280,
+            160
+          ]
+        }
+      ],
+      "automations": [],
+      "tags": [
+        "1 Read Area",
+        "Translate"
+      ],
+      "file": "layouts/sample_2.json",
+      "sha256": "c53539f899159485eea5e3382c1631880a15d207cb6bdf52eece212135edde66",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-3",
+      "name": "Reading the Clipboard",
+      "game": "Any program",
+      "maker": "defunkt",
+      "description": "Sample layout (made up). One hotkey reads whatever you copied.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": ""
+      },
+      "areas": [
+        {
+          "name": "Clipboard",
+          "kind": "Clipboard",
+          "hotkey": "f8",
+          "region": null
+        }
+      ],
+      "automations": [],
+      "tags": [
+        "Clipboard"
+      ],
+      "file": "layouts/sample_3.json",
+      "sha256": "5e9559feed7b53a630ac6445d95e3dd9e6d43e6366a184930f3b526448f9b605",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-4",
+      "name": "Quest Log and Map",
+      "game": "Sample Strategy",
+      "maker": "torvalds",
+      "description": "Sample layout (made up). Three boxes, and one combo that reads them all in order.",
+      "screen": {
+        "width": 3840,
+        "height": 2160,
+        "mode": "borderless"
+      },
+      "areas": [
+        {
+          "name": "Quest Title",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            120,
+            160,
+            900,
+            120
+          ]
+        },
+        {
+          "name": "Quest Text",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            120,
+            300,
+            1100,
+            900
+          ]
+        },
+        {
+          "name": "Map Name",
+          "kind": "Read Area",
+          "hotkey": "numpad 3",
+          "region": [
+            3200,
+            80,
+            560,
+            100
+          ]
+        }
+      ],
+      "automations": [
+        "Combo: Read the Quest (hotkey numpad 9)"
+      ],
+      "tags": [
+        "3 Read Areas",
+        "1 Combo"
+      ],
+      "file": "layouts/sample_4.json",
+      "sha256": "5bb5828533200a637e9deb51753a47e74dc9d256c27a60af5300774b3d051287",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-5",
+      "name": "Pop-ups That Read Themselves",
+      "game": "Sample Adventure",
+      "maker": "gaearon",
+      "description": "Sample layout (made up). Reads a pop-up when it shows up, and starts with the game.",
+      "screen": {
+        "width": 2560,
+        "height": 1080,
+        "mode": "borderless"
+      },
+      "areas": [
+        {
+          "name": "Popup Text",
+          "kind": "Read Area",
+          "hotkey": null,
+          "region": [
+            880,
+            380,
+            800,
+            300
+          ]
+        }
+      ],
+      "automations": [
+        "Detection Area: Popup Shows",
+        "Starts monitoring with adventure.exe"
+      ],
+      "tags": [
+        "1 Read Area",
+        "1 Detection Area",
+        "Auto Monitoring"
+      ],
+      "file": "layouts/sample_5.json",
+      "sha256": "5a957eb2a03efcf8c5da56752772f8dee44b4b3ac752f56a37b910909e019ba8",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-6",
+      "name": "Chat and Names",
+      "game": "Sample Online Game",
+      "maker": "sindresorhus",
+      "description": "Sample layout (made up). Chat on the left, the name of what you target at the top.",
+      "screen": {
+        "width": 1920,
+        "height": 1200,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Chat",
+          "kind": "Read Area",
+          "hotkey": "f5",
+          "region": [
+            20,
+            700,
+            560,
+            420
+          ]
+        },
+        {
+          "name": "Target Name",
+          "kind": "Read Area",
+          "hotkey": "f6",
+          "region": [
+            760,
+            20,
+            400,
+            60
+          ]
+        },
+        {
+          "name": "Quick Read Area 1",
+          "kind": "Quick Read Area",
+          "hotkey": "f7",
+          "region": null
+        }
+      ],
+      "automations": [],
+      "tags": [
+        "2 Read Areas",
+        "1 Quick Read Area"
+      ],
+      "file": "layouts/sample_6.json",
+      "sha256": "dabd9c12ef014cbb10a0fd2a1f6c2d6d579b5cda64ed60ea15c6861caa3e48d7",
+      "added": "2026-11-07"
+    }
+  ]
 }
