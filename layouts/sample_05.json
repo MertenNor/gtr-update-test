@@ -127,6 +127,27 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "SUM",
+        "replace": "the sum of"
+      },
+      {
+        "find": "AVG",
+        "replace": "the average of"
+      },
+      {
+        "find": "IF",
+        "replace": "if"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "unit_detection": true
+  },
   "screen": {
     "width": 1920,
     "height": 1080,

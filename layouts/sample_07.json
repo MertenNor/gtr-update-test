@@ -169,6 +169,20 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "lol",
+        "replace": "laughing out loud"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_usernames": true,
+    "ignored_words": "gg, brb, afk"
+  },
   "screen": {
     "width": 1920,
     "height": 1200,

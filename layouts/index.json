@@ -31,6 +31,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -70,6 +71,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -114,6 +116,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -170,6 +173,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -233,6 +237,10 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [
+        "Text Replacement: 3 rules",
+        "Text Filters: Fix OCR mix-ups, Read units in full"
+      ],
       "addons": [
         [
           "piper",
@@ -244,10 +252,11 @@
       ],
       "tags": [
         "2 Read Areas",
-        "1 Quick Read Area"
+        "1 Quick Read Area",
+        "Text Replacement"
       ],
       "file": "layouts/sample_05.json",
-      "sha256": "6ba0f645f4173cbc97fe8ed773feb913576eb2e3210d7295b206ad17993b3626",
+      "sha256": "4e2074d244587d1fb8594e598301220e90f0568cb6a82188e5128a6a4b6106b8",
       "added": "2026-11-07"
     },
     {
@@ -287,6 +296,10 @@
       "translations": [
         "Subtitles: from Japanese to English"
       ],
+      "text_rules": [
+        "Text Replacement: 2 rules",
+        "Text Filters: Fix OCR mix-ups, Skip text already read"
+      ],
       "addons": [
         [
           "rapidocr",
@@ -303,10 +316,11 @@
       ],
       "tags": [
         "1 Read Area",
-        "Translate"
+        "Translate",
+        "Text Replacement"
       ],
       "file": "layouts/sample_06.json",
-      "sha256": "5ed6510393af8a2c352c18c8a352ee4801f3804bd469cb58e220e0990735ee09",
+      "sha256": "885b6d81c730e0260fa21581b7980abb64a1b00bad150765f9423a7229e300ae",
       "added": "2026-11-07"
     },
     {
@@ -375,6 +389,10 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "text_rules": [
+        "Text Replacement: 1 rule",
+        "Text Filters: Fix OCR mix-ups, Skip chat names, 3 ignored words"
+      ],
       "addons": [
         [
           "piper",
@@ -391,10 +409,11 @@
       ],
       "tags": [
         "3 Read Areas",
-        "1 Quick Read Area"
+        "1 Quick Read Area",
+        "Text Replacement"
       ],
       "file": "layouts/sample_07.json",
-      "sha256": "f628a2e81e26dacb0bf1be33d868d2525ce1adc2502f8fcf740b3509fab5c5f7",
+      "sha256": "4d71c5fd1f618d7cd00cd51a0c3f9d2db10a1614baa6879ab5ea777b08a47ef5",
       "added": "2026-11-07"
     },
     {
@@ -458,6 +477,7 @@
         "Combo: Read the Quest (hotkey numpad 9)"
       ],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -542,6 +562,7 @@
         "Combo: Read Both (hotkey f2)"
       ],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -599,6 +620,7 @@
         "Starts monitoring with adventure.exe"
       ],
       "translations": [],
+      "text_rules": [],
       "addons": [],
       "uses": [],
       "tags": [
@@ -677,6 +699,7 @@
         "Detection Area: Loot Drops"
       ],
       "translations": [],
+      "text_rules": [],
       "addons": [
         [
           "kokoro",
@@ -860,6 +883,10 @@
       "translations": [
         "Dialogue: from the language set in Settings to English"
       ],
+      "text_rules": [
+        "Text Replacement: 5 rules",
+        "Text Filters: Fix OCR mix-ups, Skip text already read, Skip gibberish, 2 ignored words"
+      ],
       "addons": [
         [
           "piper",
@@ -890,10 +917,11 @@
         "2 Combos",
         "3 Detection Areas",
         "Auto Monitoring",
-        "Translate"
+        "Translate",
+        "Text Replacement"
       ],
       "file": "layouts/sample_12.json",
-      "sha256": "e4246196ba85e2b7b63747d54f99ea65ab776df3fd7ddd6233d581050870ce04",
+      "sha256": "63454b828d03ae14b3cc3972700c9eff90665004b2751b53c5f9e2ad0604a2d7",
       "added": "2026-11-07"
     }
   ]

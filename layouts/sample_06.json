@@ -48,6 +48,23 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "[music]",
+        "replace": ""
+      },
+      {
+        "find": "Mr.",
+        "replace": "Mister"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_already_read": true
+  },
   "screen": {
     "width": 2560,
     "height": 1440,

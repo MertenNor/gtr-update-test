@@ -381,6 +381,37 @@
       "page": 0
     }
   ],
+  "text_replacement": {
+    "rules": [
+      {
+        "find": "HP",
+        "replace": "health"
+      },
+      {
+        "find": "MP",
+        "replace": "mana"
+      },
+      {
+        "find": "XP",
+        "replace": "experience"
+      },
+      {
+        "find": "lvl",
+        "replace": "level"
+      },
+      {
+        "find": "x",
+        "replace": "times"
+      }
+    ],
+    "enabled": true
+  },
+  "text_filters": {
+    "char_normalization": true,
+    "ignore_already_read": true,
+    "ignore_gibberish": true,
+    "ignored_words": "Press, Skip"
+  },
   "automations": {
     "area_combos": [
       {
