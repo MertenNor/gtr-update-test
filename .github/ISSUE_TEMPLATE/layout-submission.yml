@@ -20,8 +20,8 @@ body:
     attributes:
       label: What it is for
       options:
-        - Games
-        - Programs
+        - Game
+        - Program
         - Other
     validations:
       required: true
