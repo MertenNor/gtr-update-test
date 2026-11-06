@@ -51,6 +51,6 @@ body:
     id: file
     attributes:
       label: Layout file
-      description: Drag the layout file (the .zip) into this box.
+      description: Drag the layout file (the .txt that Submit a Layout made) into this box.
     validations:
       required: true
