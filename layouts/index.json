@@ -24,7 +24,8 @@
             780,
             1320,
             220
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Menu",
@@ -35,14 +36,19 @@
             120,
             520,
             600
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Quick Read Area 1",
           "kind": "Quick Read Area",
           "hotkey": "numpad 0",
-          "region": null
+          "region": null,
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -80,8 +86,12 @@
             1200,
             1280,
             160
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -115,8 +125,12 @@
           "name": "Clipboard",
           "kind": "Clipboard",
           "hotkey": "f8",
-          "region": null
+          "region": null,
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -151,7 +165,8 @@
             160,
             900,
             120
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Quest Text",
@@ -162,7 +177,8 @@
             300,
             1100,
             900
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Map Name",
@@ -173,8 +189,13 @@
             80,
             560,
             100
-          ]
+          ],
+          "page": 1
         }
+      ],
+      "pages": [
+        "Quest",
+        "Map"
       ],
       "detections": [],
       "automations": [
@@ -186,7 +207,7 @@
         "1 Combo"
       ],
       "file": "layouts/sample_4.json",
-      "sha256": "5bb5828533200a637e9deb51753a47e74dc9d256c27a60af5300774b3d051287",
+      "sha256": "b1dfe62c2a700933d4133cb17bc95a237297df36fdb1a7c243920aaac714819d",
       "added": "2026-11-07"
     },
     {
@@ -212,8 +233,12 @@
             380,
             800,
             300
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [
         [
@@ -260,7 +285,8 @@
             700,
             560,
             420
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Target Name",
@@ -271,14 +297,19 @@
             20,
             400,
             60
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Quick Read Area 1",
           "kind": "Quick Read Area",
           "hotkey": "f7",
-          "region": null
+          "region": null,
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -314,7 +345,8 @@
             120,
             760,
             80
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Loot",
@@ -325,8 +357,12 @@
             1000,
             560,
             240
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [
         [
@@ -378,7 +414,8 @@
             180,
             300,
             60
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Formula Bar",
@@ -389,8 +426,12 @@
             140,
             1200,
             50
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -425,7 +466,8 @@
             1100,
             1200,
             160
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Channel Name",
@@ -436,8 +478,12 @@
             60,
             600,
             60
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [
@@ -475,8 +521,12 @@
             900,
             1200,
             140
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -510,20 +560,26 @@
           "name": "Quick Read Area 1",
           "kind": "Quick Read Area",
           "hotkey": "numpad 1",
-          "region": null
+          "region": null,
+          "page": 0
         },
         {
           "name": "Quick Read Area 2",
           "kind": "Quick Read Area",
           "hotkey": "numpad 2",
-          "region": null
+          "region": null,
+          "page": 0
         },
         {
           "name": "Quick Read Area 3",
           "kind": "Quick Read Area",
           "hotkey": "numpad 3",
-          "region": null
+          "region": null,
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],
@@ -558,7 +614,8 @@
             300,
             640,
             90
-          ]
+          ],
+          "page": 0
         },
         {
           "name": "Character",
@@ -569,8 +626,12 @@
             920,
             320,
             70
-          ]
+          ],
+          "page": 0
         }
+      ],
+      "pages": [
+        "Tab 1"
       ],
       "detections": [],
       "automations": [],

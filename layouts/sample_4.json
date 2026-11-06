@@ -2,7 +2,8 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Tab 1"
+    "Quest",
+    "Map"
   ],
   "areas": [
     {
@@ -129,7 +130,7 @@
       "translate_hint": "",
       "read_clipboard": false,
       "ocr_engine": "",
-      "page": 0
+      "page": 1
     }
   ],
   "automations": {
