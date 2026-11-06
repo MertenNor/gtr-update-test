@@ -1,0 +1,24 @@
+name: Layout submission
+description: Send a layout for review
+title: "Layout: "
+labels: ["layout submission"]
+body:
+  - type: input
+    id: game
+    attributes:
+      label: Game or program
+    validations:
+      required: true
+  - type: input
+    id: resolution
+    attributes:
+      label: Screen resolution and mode the game ran in (for example 1920x1080, windowed)
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: Layout file
+      description: Drag the layout file into this box.
+    validations:
+      required: true
