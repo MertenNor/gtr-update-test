@@ -46,7 +46,7 @@
       "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
-      "ocr_engine": "rapidocr",
+      "ocr_engine": "rapid_ocr",
       "page": 0
     },
     {

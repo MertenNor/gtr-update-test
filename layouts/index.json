@@ -30,6 +30,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "Clipboard"
@@ -67,6 +68,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "1 Quick Read Area"
@@ -109,6 +111,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "1 Read Area"
@@ -163,6 +166,7 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "2 Read Areas"
@@ -224,6 +228,12 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ]
+      ],
       "uses": [
         "Voice: Piper: Amy"
       ],
@@ -271,8 +281,18 @@
       "translations": [
         "Subtitles: from Japanese to English"
       ],
+      "addons": [
+        [
+          "rapidocr",
+          "RapidOCR"
+        ],
+        [
+          "translator",
+          "A translator"
+        ]
+      ],
       "uses": [
-        "OCR engine: rapidocr",
+        "OCR engine: rapid_ocr",
         "A translator"
       ],
       "tags": [
@@ -280,7 +300,7 @@
         "Translate"
       ],
       "file": "layouts/sample_06.json",
-      "sha256": "f2eb5d2d7775dbcb5c347a9e591550d4012ad0a020bd3be70d2607c00a586abc",
+      "sha256": "5ed6510393af8a2c352c18c8a352ee4801f3804bd469cb58e220e0990735ee09",
       "added": "2026-11-07"
     },
     {
@@ -348,6 +368,16 @@
       "detection_names": [],
       "automations": [],
       "translations": [],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ],
+        [
+          "kokoro",
+          "Kokoro"
+        ]
+      ],
       "uses": [
         "Voice: Piper: Amy",
         "Voice: Kokoro: Heart"
@@ -420,6 +450,7 @@
         "Combo: Read the Quest (hotkey numpad 9)"
       ],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "3 Read Areas",
@@ -502,6 +533,7 @@
         "Combo: Read Both (hotkey f2)"
       ],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "4 Read Areas",
@@ -557,6 +589,7 @@
         "Starts monitoring with adventure.exe"
       ],
       "translations": [],
+      "addons": [],
       "uses": [],
       "tags": [
         "1 Read Area",
@@ -633,6 +666,16 @@
         "Detection Area: Loot Drops"
       ],
       "translations": [],
+      "addons": [
+        [
+          "kokoro",
+          "Kokoro"
+        ],
+        [
+          "piper",
+          "Piper"
+        ]
+      ],
       "uses": [
         "Voice: Kokoro: Heart",
         "Voice: Piper: Amy"
@@ -805,10 +848,28 @@
       "translations": [
         "Dialogue: from the language set in Settings to English"
       ],
+      "addons": [
+        [
+          "piper",
+          "Piper"
+        ],
+        [
+          "rapidocr",
+          "RapidOCR"
+        ],
+        [
+          "kokoro",
+          "Kokoro"
+        ],
+        [
+          "translator",
+          "A translator"
+        ]
+      ],
       "uses": [
         "Voice: Piper: Amy",
         "Voice: Kokoro: Heart",
-        "OCR engine: rapidocr",
+        "OCR engine: rapid_ocr",
         "A translator"
       ],
       "tags": [
@@ -820,7 +881,7 @@
         "Translate"
       ],
       "file": "layouts/sample_12.json",
-      "sha256": "ec88d7160275ac09d18b4772cdd279ee7bb84195b98d7236688e89e552c5a4d1",
+      "sha256": "e4246196ba85e2b7b63747d54f99ea65ab776df3fd7ddd6233d581050870ce04",
       "added": "2026-11-07"
     }
   ]
