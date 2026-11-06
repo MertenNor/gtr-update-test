@@ -6,15 +6,10 @@
   ],
   "areas": [
     {
-      "name": "Popup Text",
-      "area_type": "read_area",
-      "hotkey": null,
-      "region": [
-        880,
-        380,
-        800,
-        300
-      ],
+      "name": "Quick Read Area 1",
+      "area_type": "quick_read",
+      "hotkey": "numpad 0",
+      "region": null,
       "voice": null,
       "speed": 100,
       "freeze_screen": false,
@@ -48,28 +43,9 @@
       "page": 0
     }
   ],
-  "automations": {
-    "detection_areas": [
-      {
-        "name": "Popup Shows",
-        "region": [
-          1180,
-          330,
-          200,
-          40
-        ],
-        "picture": "",
-        "target": "Popup Text",
-        "match_percent": 90,
-        "wait_ms": 0
-      }
-    ],
-    "auto_monitor": true,
-    "auto_monitor_program": "adventure.exe"
-  },
   "screen": {
-    "width": 2560,
+    "width": 1920,
     "height": 1080,
-    "mode": "borderless"
+    "mode": ""
   }
 }

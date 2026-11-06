@@ -6,11 +6,16 @@
   ],
   "areas": [
     {
-      "name": "Quick Read Area 1",
-      "area_type": "quick_read",
-      "hotkey": "numpad 1",
-      "region": null,
-      "voice": null,
+      "name": "Boss Name",
+      "area_type": "read_area",
+      "hotkey": "numpad 4",
+      "region": [
+        900,
+        120,
+        760,
+        80
+      ],
+      "voice": "Kokoro: Heart",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -43,48 +48,16 @@
       "page": 0
     },
     {
-      "name": "Quick Read Area 2",
-      "area_type": "quick_read",
-      "hotkey": "numpad 2",
-      "region": null,
-      "voice": null,
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 0
-    },
-    {
-      "name": "Quick Read Area 3",
-      "area_type": "quick_read",
-      "hotkey": "numpad 3",
-      "region": null,
-      "voice": null,
+      "name": "Loot",
+      "area_type": "read_area",
+      "hotkey": "numpad 5",
+      "region": [
+        1000,
+        1000,
+        560,
+        240
+      ],
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -117,9 +90,58 @@
       "page": 0
     }
   ],
+  "automations": {
+    "detection_areas": [
+      {
+        "name": "Boss Appears",
+        "region": [
+          1180,
+          90,
+          200,
+          40
+        ],
+        "picture": "",
+        "target": "Boss Name",
+        "match_percent": 90,
+        "wait_ms": 0
+      },
+      {
+        "name": "Loot Drops",
+        "region": [
+          1220,
+          960,
+          120,
+          40
+        ],
+        "picture": "",
+        "target": "Loot",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ],
+    "area_combos": [
+      {
+        "name": "Read Both",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Boss Name"
+          },
+          {
+            "kind": "area",
+            "target": "Loot"
+          }
+        ]
+      }
+    ]
+  },
   "screen": {
-    "width": 1920,
-    "height": 1080,
-    "mode": ""
+    "width": 2560,
+    "height": 1440,
+    "mode": "fullscreen"
   }
 }

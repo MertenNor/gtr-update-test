@@ -2,7 +2,8 @@
   "format": "gametextreader-pyside",
   "version": 2,
   "pages": [
-    "Tab 1"
+    "Chat",
+    "Settings"
   ],
   "areas": [
     {
@@ -88,6 +89,90 @@
       "read_clipboard": false,
       "ocr_engine": "",
       "page": 0
+    },
+    {
+      "name": "Setting Name",
+      "area_type": "read_area",
+      "hotkey": "numpad 7",
+      "region": [
+        400,
+        300,
+        900,
+        80
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 1
+    },
+    {
+      "name": "Setting Help",
+      "area_type": "read_area",
+      "hotkey": "numpad 8",
+      "region": [
+        400,
+        420,
+        900,
+        500
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 1
     }
   ],
   "automations": {

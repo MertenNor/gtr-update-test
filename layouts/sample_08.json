@@ -6,58 +6,16 @@
   ],
   "areas": [
     {
-      "name": "Dialogue",
+      "name": "Quest Title",
       "area_type": "read_area",
-      "hotkey": "numpad 5",
+      "hotkey": "numpad 1",
       "region": [
-        300,
-        780,
-        1320,
-        220
-      ],
-      "voice": "Piper: Amy",
-      "speed": 100,
-      "freeze_screen": false,
-      "minimize_before_capture": false,
-      "process_freeze_screen": false,
-      "queue_next_scan": false,
-      "preprocess_enabled": false,
-      "processing_settings": {
-        "brightness": 1.0,
-        "contrast": 1.0,
-        "saturation": 1.0,
-        "sharpness": 1.0,
-        "exposure": 1.0,
-        "hue": 0.0,
-        "threshold": 128,
-        "threshold_enabled": false,
-        "color_mask_enabled": false,
-        "color_mask_colors": [],
-        "color_mask_tolerance": 15,
-        "color_mask_background": "#000000",
-        "color_mask_position": "after",
-        "color_mask_invert": false
-      },
-      "box_color": null,
-      "translate": false,
-      "translate_from": "",
-      "translate_to": "",
-      "translate_hint": "",
-      "read_clipboard": false,
-      "ocr_engine": "",
-      "page": 0
-    },
-    {
-      "name": "Menu",
-      "area_type": "read_area",
-      "hotkey": "numpad 6",
-      "region": [
-        60,
         120,
-        520,
-        600
+        160,
+        900,
+        120
       ],
-      "voice": "Piper: Amy",
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -90,11 +48,58 @@
       "page": 0
     },
     {
-      "name": "Quick Read Area 1",
-      "area_type": "quick_read",
-      "hotkey": "numpad 0",
-      "region": null,
-      "voice": "Piper: Amy",
+      "name": "Quest Text",
+      "area_type": "read_area",
+      "hotkey": "numpad 2",
+      "region": [
+        120,
+        300,
+        1100,
+        900
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Map Name",
+      "area_type": "read_area",
+      "hotkey": "numpad 3",
+      "region": [
+        3200,
+        80,
+        560,
+        100
+      ],
+      "voice": null,
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -127,9 +132,30 @@
       "page": 0
     }
   ],
+  "automations": {
+    "area_combos": [
+      {
+        "name": "Read the Quest",
+        "hotkey": "numpad 9",
+        "enabled": true,
+        "repeat_seconds": 0,
+        "capture_first": false,
+        "steps": [
+          {
+            "kind": "area",
+            "target": "Quest Title"
+          },
+          {
+            "kind": "area",
+            "target": "Quest Text"
+          }
+        ]
+      }
+    ]
+  },
   "screen": {
-    "width": 1920,
-    "height": 1080,
-    "mode": "windowed"
+    "width": 3840,
+    "height": 2160,
+    "mode": "borderless"
   }
 }

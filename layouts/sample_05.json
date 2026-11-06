@@ -6,16 +6,16 @@
   ],
   "areas": [
     {
-      "name": "Chat",
+      "name": "Cell",
       "area_type": "read_area",
-      "hotkey": "f5",
+      "hotkey": "numpad 1",
       "region": [
-        20,
-        700,
-        560,
-        420
+        100,
+        180,
+        300,
+        60
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -48,16 +48,16 @@
       "page": 0
     },
     {
-      "name": "Target Name",
+      "name": "Formula Bar",
       "area_type": "read_area",
-      "hotkey": "f6",
+      "hotkey": "numpad 2",
       "region": [
-        760,
-        20,
-        400,
-        60
+        420,
+        140,
+        1200,
+        50
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -92,9 +92,9 @@
     {
       "name": "Quick Read Area 1",
       "area_type": "quick_read",
-      "hotkey": "f7",
+      "hotkey": "numpad 0",
       "region": null,
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -129,7 +129,7 @@
   ],
   "screen": {
     "width": 1920,
-    "height": 1200,
+    "height": 1080,
     "mode": "windowed"
   }
 }
