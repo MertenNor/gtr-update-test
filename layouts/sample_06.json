@@ -40,7 +40,7 @@
       },
       "box_color": null,
       "translate": true,
-      "translate_from": "",
+      "translate_from": "ja",
       "translate_to": "en",
       "translate_hint": "",
       "read_clipboard": false,
