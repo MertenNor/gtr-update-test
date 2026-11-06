@@ -288,12 +288,12 @@
         ],
         [
           "translator",
-          "A translator"
+          "Any translator"
         ]
       ],
       "uses": [
         "OCR engine: rapid_ocr",
-        "A translator"
+        "Any translator"
       ],
       "tags": [
         "1 Read Area",
@@ -863,14 +863,14 @@
         ],
         [
           "translator",
-          "A translator"
+          "Any translator"
         ]
       ],
       "uses": [
         "Voice: Piper: Amy",
         "Voice: Kokoro: Heart",
         "OCR engine: rapid_ocr",
-        "A translator"
+        "Any translator"
       ],
       "tags": [
         "8 Read Areas",
