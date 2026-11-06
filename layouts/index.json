@@ -27,6 +27,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [],
@@ -63,6 +64,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [],
@@ -104,6 +106,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [],
@@ -157,6 +160,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [],
@@ -217,6 +221,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [
@@ -261,6 +266,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [
         "Subtitles: from Japanese to English"
@@ -339,6 +345,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [],
       "translations": [],
       "uses": [
@@ -408,6 +415,7 @@
         "Tab 1"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [
         "Combo: Read the Quest (hotkey numpad 9)"
       ],
@@ -489,6 +497,7 @@
         "Settings"
       ],
       "detections": [],
+      "detection_names": [],
       "automations": [
         "Combo: Read Both (hotkey f2)"
       ],
@@ -539,6 +548,9 @@
           200,
           40
         ]
+      ],
+      "detection_names": [
+        "Popup Shows"
       ],
       "automations": [
         "Detection Area: Popup Shows",
@@ -610,6 +622,10 @@
           120,
           40
         ]
+      ],
+      "detection_names": [
+        "Boss Appears",
+        "Loot Drops"
       ],
       "automations": [
         "Combo: Read Both (hotkey numpad 9)",
@@ -772,6 +788,11 @@
           200,
           40
         ]
+      ],
+      "detection_names": [
+        "Dialogue Shows",
+        "New Quest",
+        "Item Opened"
       ],
       "automations": [
         "Combo: Read the Quest (hotkey numpad 9)",
