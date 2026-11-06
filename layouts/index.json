@@ -32,6 +32,9 @@
       "automations": [],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "",
       "addons": [],
       "uses": [],
       "tags": [
@@ -72,6 +75,9 @@
       "automations": [],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "",
       "addons": [],
       "uses": [],
       "tags": [
@@ -117,6 +123,9 @@
       "automations": [],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "",
       "addons": [],
       "uses": [],
       "tags": [
@@ -174,6 +183,9 @@
       "automations": [],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "",
       "addons": [],
       "uses": [],
       "tags": [
@@ -241,6 +253,13 @@
         "Text Replacement: 3 rules",
         "Text Filters: Fix OCR mix-ups, Read units in full"
       ],
+      "text_rule_list": [
+        "SUM \u2192 the sum of",
+        "AVG \u2192 the average of",
+        "IF \u2192 if"
+      ],
+      "text_rules_note": "Reads SUM, AVG and IF as words instead of spelling them out.",
+      "automations_note": "",
       "addons": [
         [
           "piper",
@@ -300,6 +319,12 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups, Skip text already read"
       ],
+      "text_rule_list": [
+        "[music] \u2192 (left out)",
+        "Mr. \u2192 Mister"
+      ],
+      "text_rules_note": "Takes out the [music] tags and writes Mr. out in full, so it is read as a word.",
+      "automations_note": "",
       "addons": [
         [
           "rapidocr",
@@ -393,6 +418,11 @@
         "Text Replacement: 1 rule",
         "Text Filters: Fix OCR mix-ups, Skip chat names, 3 ignored words"
       ],
+      "text_rule_list": [
+        "lol \u2192 laughing out loud"
+      ],
+      "text_rules_note": "Reads lol as words and skips the names in front of chat lines.",
+      "automations_note": "",
       "addons": [
         [
           "piper",
@@ -478,6 +508,9 @@
       ],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "One hotkey reads the quest title and then its text, one after the other.",
       "addons": [],
       "uses": [],
       "tags": [
@@ -563,6 +596,9 @@
       ],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "One hotkey reads the channel name and then the newest message.",
       "addons": [],
       "uses": [],
       "tags": [
@@ -621,6 +657,9 @@
       ],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "Watches for the pop-up to show up and reads it by itself. Monitoring starts when the game does.",
       "addons": [],
       "uses": [],
       "tags": [
@@ -700,6 +739,9 @@
       ],
       "translations": [],
       "text_rules": [],
+      "text_rule_list": [],
+      "text_rules_note": "",
+      "automations_note": "Watches two spots: a boss name and a loot drop. Each one reads its own box, and one hotkey reads both.",
       "addons": [
         [
           "kokoro",
@@ -887,6 +929,15 @@
         "Text Replacement: 5 rules",
         "Text Filters: Fix OCR mix-ups, Skip text already read, Skip gibberish, 2 ignored words"
       ],
+      "text_rule_list": [
+        "HP \u2192 health",
+        "MP \u2192 mana",
+        "XP \u2192 experience",
+        "lvl \u2192 level",
+        "x \u2192 times"
+      ],
+      "text_rules_note": "Spells out game words (HP, MP, XP, lvl) and skips words that are only buttons to press.",
+      "automations_note": "Combos read a quest or an item in one press. Three watched spots read a new line of dialogue, a new quest and an opened item by themselves. Monitoring starts when the game does.",
       "addons": [
         [
           "piper",
