@@ -4,9 +4,41 @@ title: "Layout: "
 labels: ["layout submission"]
 body:
   - type: input
+    id: name
+    attributes:
+      label: Name of the layout
+    validations:
+      required: true
+  - type: input
     id: game
     attributes:
       label: Game or program
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: What it is for
+      options:
+        - Games
+        - Programs
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version (a number)
+      value: "1"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Is this new, or an update?
+      options:
+        - A new layout
+        - Update of a layout I shared before
     validations:
       required: true
   - type: input
@@ -19,6 +51,6 @@ body:
     id: file
     attributes:
       label: Layout file
-      description: Drag the layout file into this box.
+      description: Drag the layout file (the .zip) into this box.
     validations:
       required: true

@@ -5,7 +5,9 @@
       "id": "sample-1",
       "name": "Dialogue and Menus",
       "game": "Sample RPG",
+      "category": "Games",
       "maker": "MertenNor",
+      "version": 1,
       "description": "Sample layout (made up). Reads the dialogue box at the bottom, and the menu item you point at.",
       "screen": {
         "width": 1920,
@@ -44,19 +46,24 @@
       ],
       "detections": [],
       "automations": [],
+      "uses": [
+        "Voice: Piper: Amy"
+      ],
       "tags": [
         "2 Read Areas",
         "1 Quick Read Area"
       ],
       "file": "layouts/sample_1.json",
-      "sha256": "ec24be88bac80393761662c6262bf4294329937bd23cbaa2887d12c9fd5b6495",
+      "sha256": "08639e6298d6104ac8235e758fc1a94aa806c6ff09f4f94f0024b4b4a7414574",
       "added": "2026-11-07"
     },
     {
       "id": "sample-2",
       "name": "Subtitles",
       "game": "Sample Shooter",
+      "category": "Games",
       "maker": "octocat",
+      "version": 2,
       "description": "Sample layout (made up). Subtitles at the bottom center, translated to English.",
       "screen": {
         "width": 2560,
@@ -78,19 +85,25 @@
       ],
       "detections": [],
       "automations": [],
+      "uses": [
+        "OCR engine: rapidocr",
+        "A translator"
+      ],
       "tags": [
         "1 Read Area",
         "Translate"
       ],
       "file": "layouts/sample_2.json",
-      "sha256": "c53539f899159485eea5e3382c1631880a15d207cb6bdf52eece212135edde66",
+      "sha256": "1565dce4c698490264c9548d983126e1f2fa32671632932ac9aa981dae09407e",
       "added": "2026-11-07"
     },
     {
       "id": "sample-3",
       "name": "Reading the Clipboard",
       "game": "Any program",
+      "category": "Other",
       "maker": "defunkt",
+      "version": 1,
       "description": "Sample layout (made up). One hotkey reads whatever you copied.",
       "screen": {
         "width": 1920,
@@ -107,6 +120,7 @@
       ],
       "detections": [],
       "automations": [],
+      "uses": [],
       "tags": [
         "Clipboard"
       ],
@@ -118,7 +132,9 @@
       "id": "sample-4",
       "name": "Quest Log and Map",
       "game": "Sample Strategy",
+      "category": "Games",
       "maker": "torvalds",
+      "version": 3,
       "description": "Sample layout (made up). Three boxes, and one combo that reads them all in order.",
       "screen": {
         "width": 3840,
@@ -164,6 +180,7 @@
       "automations": [
         "Combo: Read the Quest (hotkey numpad 9)"
       ],
+      "uses": [],
       "tags": [
         "3 Read Areas",
         "1 Combo"
@@ -176,7 +193,9 @@
       "id": "sample-5",
       "name": "Pop-ups That Read Themselves",
       "game": "Sample Adventure",
+      "category": "Games",
       "maker": "gaearon",
+      "version": 1,
       "description": "Sample layout (made up). Reads a pop-up when it shows up, and starts with the game.",
       "screen": {
         "width": 2560,
@@ -208,6 +227,7 @@
         "Detection Area: Popup Shows",
         "Starts monitoring with adventure.exe"
       ],
+      "uses": [],
       "tags": [
         "1 Read Area",
         "1 Detection Area",
@@ -221,7 +241,9 @@
       "id": "sample-6",
       "name": "Chat and Names",
       "game": "Sample Online Game",
+      "category": "Games",
       "maker": "sindresorhus",
+      "version": 1,
       "description": "Sample layout (made up). Chat on the left, the name of what you target at the top.",
       "screen": {
         "width": 1920,
@@ -260,12 +282,306 @@
       ],
       "detections": [],
       "automations": [],
+      "uses": [],
       "tags": [
         "2 Read Areas",
         "1 Quick Read Area"
       ],
       "file": "layouts/sample_6.json",
       "sha256": "dabd9c12ef014cbb10a0fd2a1f6c2d6d579b5cda64ed60ea15c6861caa3e48d7",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-7",
+      "name": "Boss and Loot Alerts",
+      "game": "Sample Action RPG",
+      "category": "Games",
+      "maker": "addyosmani",
+      "version": 2,
+      "description": "Sample layout (made up). Two spots that are watched: a boss name and a loot drop. Each one reads its own box.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "fullscreen"
+      },
+      "areas": [
+        {
+          "name": "Boss Name",
+          "kind": "Read Area",
+          "hotkey": null,
+          "region": [
+            900,
+            120,
+            760,
+            80
+          ]
+        },
+        {
+          "name": "Loot",
+          "kind": "Read Area",
+          "hotkey": null,
+          "region": [
+            1000,
+            1000,
+            560,
+            240
+          ]
+        }
+      ],
+      "detections": [
+        [
+          1180,
+          90,
+          200,
+          40
+        ],
+        [
+          1220,
+          960,
+          120,
+          40
+        ]
+      ],
+      "automations": [
+        "Detection Area: Boss Appears",
+        "Detection Area: Loot Drops"
+      ],
+      "uses": [],
+      "tags": [
+        "2 Read Areas",
+        "2 Detection Areas"
+      ],
+      "file": "layouts/sample_7.json",
+      "sha256": "bbccc516027911688f59497f1512267e50efcca6fa1488365bcc7669d6b5554d",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-8",
+      "name": "Spreadsheet Cells",
+      "game": "A spreadsheet program",
+      "category": "Programs",
+      "maker": "kentcdodds",
+      "version": 1,
+      "description": "Sample layout (made up). Reads the cell you are in, and the formula bar.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Cell",
+          "kind": "Read Area",
+          "hotkey": "numpad 1",
+          "region": [
+            100,
+            180,
+            300,
+            60
+          ]
+        },
+        {
+          "name": "Formula Bar",
+          "kind": "Read Area",
+          "hotkey": "numpad 2",
+          "region": [
+            420,
+            140,
+            1200,
+            50
+          ]
+        }
+      ],
+      "detections": [],
+      "automations": [],
+      "uses": [],
+      "tags": [
+        "2 Read Areas"
+      ],
+      "file": "layouts/sample_8.json",
+      "sha256": "77849675137a154fc1dc7a01127f54450bb1f211b3eed67a0b9caa90018bcabb",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-9",
+      "name": "Chat Window Reader",
+      "game": "A chat program",
+      "category": "Programs",
+      "maker": "tj",
+      "version": 1,
+      "description": "Sample layout (made up). Reads the newest message at the bottom of the window.",
+      "screen": {
+        "width": 2560,
+        "height": 1440,
+        "mode": "windowed"
+      },
+      "areas": [
+        {
+          "name": "Newest Message",
+          "kind": "Read Area",
+          "hotkey": "f3",
+          "region": [
+            700,
+            1100,
+            1200,
+            160
+          ]
+        },
+        {
+          "name": "Channel Name",
+          "kind": "Read Area",
+          "hotkey": "f4",
+          "region": [
+            700,
+            60,
+            600,
+            60
+          ]
+        }
+      ],
+      "detections": [],
+      "automations": [
+        "Combo: Read Both (hotkey f2)"
+      ],
+      "uses": [],
+      "tags": [
+        "2 Read Areas",
+        "1 Combo"
+      ],
+      "file": "layouts/sample_9.json",
+      "sha256": "d209f286b43ed770c74ccb0f2b671d43b8989a4becb5ba97fa303c1deed86b2e",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-10",
+      "name": "Video Subtitles Translated",
+      "game": "Any video player",
+      "category": "Programs",
+      "maker": "sindresorhus",
+      "version": 1,
+      "description": "Sample layout (made up). Subtitles at the bottom, translated to English.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "borderless"
+      },
+      "areas": [
+        {
+          "name": "Subtitles",
+          "kind": "Read Area",
+          "hotkey": "numpad 4",
+          "region": [
+            360,
+            900,
+            1200,
+            140
+          ]
+        }
+      ],
+      "detections": [],
+      "automations": [],
+      "uses": [
+        "OCR engine: rapidocr",
+        "A translator"
+      ],
+      "tags": [
+        "1 Read Area",
+        "Translate"
+      ],
+      "file": "layouts/sample_10.json",
+      "sha256": "17c1861fde41f3c3c389016cd773f5e00e1be6401e057268b558c99e08206356",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-11",
+      "name": "Read Anything on Screen",
+      "game": "Any program",
+      "category": "Other",
+      "maker": "MertenNor",
+      "version": 1,
+      "description": "Sample layout (made up). Three Quick Read Areas on three hotkeys: pick a spot, hear it.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": ""
+      },
+      "areas": [
+        {
+          "name": "Quick Read Area 1",
+          "kind": "Quick Read Area",
+          "hotkey": "numpad 1",
+          "region": null
+        },
+        {
+          "name": "Quick Read Area 2",
+          "kind": "Quick Read Area",
+          "hotkey": "numpad 2",
+          "region": null
+        },
+        {
+          "name": "Quick Read Area 3",
+          "kind": "Quick Read Area",
+          "hotkey": "numpad 3",
+          "region": null
+        }
+      ],
+      "detections": [],
+      "automations": [],
+      "uses": [],
+      "tags": [
+        "3 Quick Read Areas"
+      ],
+      "file": "layouts/sample_11.json",
+      "sha256": "eaf23fa312a536331943a60dd7199c296904e02887a6510f51a850974d784566",
+      "added": "2026-11-07"
+    },
+    {
+      "id": "sample-12",
+      "name": "Menu Reader for Fighting Games",
+      "game": "Sample Fighter",
+      "category": "Games",
+      "maker": "octocat",
+      "version": 1,
+      "description": "Sample layout (made up). Reads the menu entry you are on, and the character name.",
+      "screen": {
+        "width": 1920,
+        "height": 1080,
+        "mode": "fullscreen"
+      },
+      "areas": [
+        {
+          "name": "Menu Entry",
+          "kind": "Read Area",
+          "hotkey": "numpad 8",
+          "region": [
+            160,
+            300,
+            640,
+            90
+          ]
+        },
+        {
+          "name": "Character",
+          "kind": "Read Area",
+          "hotkey": "numpad 9",
+          "region": [
+            800,
+            920,
+            320,
+            70
+          ]
+        }
+      ],
+      "detections": [],
+      "automations": [],
+      "uses": [
+        "Voice: Kokoro: Heart"
+      ],
+      "tags": [
+        "2 Read Areas"
+      ],
+      "file": "layouts/sample_12.json",
+      "sha256": "6c115e72cf2955e85b22df8ba3c0aa254c412b9c1975cd161c7f38d6c67e065d",
       "added": "2026-11-07"
     }
   ]

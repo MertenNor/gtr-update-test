@@ -15,7 +15,7 @@
         1320,
         220
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -57,7 +57,7 @@
         520,
         600
       ],
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,
@@ -94,7 +94,7 @@
       "area_type": "quick_read",
       "hotkey": "numpad 0",
       "region": null,
-      "voice": null,
+      "voice": "Piper: Amy",
       "speed": 100,
       "freeze_screen": false,
       "minimize_before_capture": false,

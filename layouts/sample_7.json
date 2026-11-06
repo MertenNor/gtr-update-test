@@ -1,0 +1,128 @@
+{
+  "format": "gametextreader-pyside",
+  "version": 2,
+  "pages": [
+    "Tab 1"
+  ],
+  "areas": [
+    {
+      "name": "Boss Name",
+      "area_type": "read_area",
+      "hotkey": null,
+      "region": [
+        900,
+        120,
+        760,
+        80
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    },
+    {
+      "name": "Loot",
+      "area_type": "read_area",
+      "hotkey": null,
+      "region": [
+        1000,
+        1000,
+        560,
+        240
+      ],
+      "voice": null,
+      "speed": 100,
+      "freeze_screen": false,
+      "minimize_before_capture": false,
+      "process_freeze_screen": false,
+      "queue_next_scan": false,
+      "preprocess_enabled": false,
+      "processing_settings": {
+        "brightness": 1.0,
+        "contrast": 1.0,
+        "saturation": 1.0,
+        "sharpness": 1.0,
+        "exposure": 1.0,
+        "hue": 0.0,
+        "threshold": 128,
+        "threshold_enabled": false,
+        "color_mask_enabled": false,
+        "color_mask_colors": [],
+        "color_mask_tolerance": 15,
+        "color_mask_background": "#000000",
+        "color_mask_position": "after",
+        "color_mask_invert": false
+      },
+      "box_color": null,
+      "translate": false,
+      "translate_from": "",
+      "translate_to": "",
+      "translate_hint": "",
+      "read_clipboard": false,
+      "ocr_engine": "",
+      "page": 0
+    }
+  ],
+  "automations": {
+    "detection_areas": [
+      {
+        "name": "Boss Appears",
+        "region": [
+          1180,
+          90,
+          200,
+          40
+        ],
+        "picture": "",
+        "target": "Boss Name",
+        "match_percent": 90,
+        "wait_ms": 0
+      },
+      {
+        "name": "Loot Drops",
+        "region": [
+          1220,
+          960,
+          120,
+          40
+        ],
+        "picture": "",
+        "target": "Loot",
+        "match_percent": 90,
+        "wait_ms": 0
+      }
+    ]
+  },
+  "screen": {
+    "width": 2560,
+    "height": 1440,
+    "mode": "fullscreen"
+  }
+}
