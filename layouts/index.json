@@ -123,13 +123,35 @@
         "Text Replacement: 5 rules",
         "Text Filters: Fix OCR mix-ups, Skip text already read"
       ],
-      "text_rule_list": [
-        "HP \u2192 health",
-        "MP \u2192 mana",
-        "ATK \u2192 attack",
-        "DEF \u2192 defense",
-        "LV \u2192 level"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "HP",
+            "health"
+          ],
+          [
+            "MP",
+            "mana"
+          ],
+          [
+            "ATK",
+            "attack"
+          ],
+          [
+            "DEF",
+            "defense"
+          ],
+          [
+            "LV",
+            "level"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip text already read"
+        ]
+      },
       "text_rules_note": "Spells out the short stat names, so HP is read as health.",
       "automations_note": "One hotkey reads the unit's name and stats. A watched spot reads the name when a turn starts.",
       "uses": [
@@ -239,10 +261,26 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups, Skip text already read, 2 ignored words"
       ],
-      "text_rule_list": [
-        "san \u2192 Mr or Ms",
-        "sama \u2192 sir or madam"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "san",
+            "Mr or Ms"
+          ],
+          [
+            "sama",
+            "sir or madam"
+          ]
+        ],
+        "ignored_words": [
+          "Auto",
+          "Skip"
+        ],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip text already read"
+        ]
+      },
       "text_rules_note": "Turns the honorifics into plain English and skips the Auto and Skip buttons.",
       "automations_note": "Watches the little arrow at the corner of the text box and reads each new line by itself. Starts with the game.",
       "uses": [
@@ -358,12 +396,31 @@
         "Text Replacement: 4 rules",
         "Text Filters: Fix OCR mix-ups, Read units in full"
       ],
-      "text_rule_list": [
-        "1ST \u2192 first",
-        "2ND \u2192 second",
-        "3RD \u2192 third",
-        "KM/H \u2192 kilometers per hour"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "1ST",
+            "first"
+          ],
+          [
+            "2ND",
+            "second"
+          ],
+          [
+            "3RD",
+            "third"
+          ],
+          [
+            "KM/H",
+            "kilometers per hour"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Read units in full"
+        ]
+      },
       "text_rules_note": "Reads 1ST as first and KM/H as kilometers per hour.",
       "automations_note": "One hotkey reads position, lap and speed. The wrong way warning is read at once.",
       "uses": [
@@ -475,12 +532,31 @@
         "Text Replacement: 4 rules",
         "Text Filters: Fix OCR mix-ups, Skip gibberish"
       ],
-      "text_rule_list": [
-        "+1 \u2192 plus one",
-        "+2 \u2192 plus two",
-        "STR \u2192 strength",
-        "DEX \u2192 dexterity"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "+1",
+            "plus one"
+          ],
+          [
+            "+2",
+            "plus two"
+          ],
+          [
+            "STR",
+            "strength"
+          ],
+          [
+            "DEX",
+            "dexterity"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip gibberish"
+        ]
+      },
       "text_rules_note": "Reads the stat bonuses as words, and skips the junk the item art makes.",
       "automations_note": "One hotkey reads an item's name, text and stats. Picking an item up reads the message log.",
       "uses": [],
@@ -610,10 +686,22 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups"
       ],
-      "text_rule_list": [
-        "K \u2192 thousand",
-        "M \u2192 million"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "K",
+            "thousand"
+          ],
+          [
+            "M",
+            "million"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups"
+        ]
+      },
       "text_rules_note": "Reads K and M as thousand and million.",
       "automations_note": "A watched spot reads the event when its pop-up shows up, and a hotkey reads it again. Starts with the game.",
       "uses": [],
@@ -711,12 +799,31 @@
         "Text Replacement: 4 rules",
         "Text Filters: Fix OCR mix-ups, Read units in full"
       ],
-      "text_rule_list": [
-        "SUM \u2192 the sum of",
-        "AVG \u2192 the average of",
-        "IF \u2192 if",
-        "VLOOKUP \u2192 look up"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "SUM",
+            "the sum of"
+          ],
+          [
+            "AVG",
+            "the average of"
+          ],
+          [
+            "IF",
+            "if"
+          ],
+          [
+            "VLOOKUP",
+            "look up"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Read units in full"
+        ]
+      },
       "text_rules_note": "Reads SUM, AVG, IF and VLOOKUP as words.",
       "automations_note": "One hotkey reads the cell and then its formula.",
       "uses": [
@@ -832,11 +939,29 @@
         "Text Replacement: 3 rules",
         "Text Filters: Fix OCR mix-ups, 2 ignored words"
       ],
-      "text_rule_list": [
-        "RE: \u2192 reply to",
-        "FWD: \u2192 forwarded",
-        "Inbox ( \u2192 Inbox, "
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "RE:",
+            "reply to"
+          ],
+          [
+            "FWD:",
+            "forwarded"
+          ],
+          [
+            "Inbox (",
+            "Inbox, "
+          ]
+        ],
+        "ignored_words": [
+          "Unsubscribe",
+          "View in browser"
+        ],
+        "filters": [
+          "Fix OCR mix-ups"
+        ]
+      },
       "text_rules_note": "Reads RE: as reply to and FWD: as forwarded, and skips the unsubscribe links.",
       "automations_note": "A watched spot reads the subject of new mail. One hotkey reads sender, subject and preview.",
       "uses": [],
@@ -926,13 +1051,34 @@
         "Text Replacement: 5 rules",
         "Text Filters: Skip text already read"
       ],
-      "text_rule_list": [
-        "=> \u2192 arrow",
-        "!= \u2192 not equal to",
-        "== \u2192 equals",
-        "{ \u2192 open brace",
-        "} \u2192 close brace"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "=>",
+            "arrow"
+          ],
+          [
+            "!=",
+            "not equal to"
+          ],
+          [
+            "==",
+            "equals"
+          ],
+          [
+            "{",
+            "open brace"
+          ],
+          [
+            "}",
+            "close brace"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Skip text already read"
+        ]
+      },
       "text_rules_note": "Reads the symbols as words, like => as arrow.",
       "automations_note": "When the build fails, the terminal is read by itself. One hotkey reads the error and the problems panel.",
       "uses": [],
@@ -1037,10 +1183,23 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups, Skip text already read"
       ],
-      "text_rule_list": [
-        "[Music] \u2192 (left out)",
-        "[Applause] \u2192 applause"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "[Music]",
+            ""
+          ],
+          [
+            "[Applause]",
+            "applause"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip text already read"
+        ]
+      },
       "text_rules_note": "Takes out the [Music] tags.",
       "automations_note": "A hotkey reads who is speaking and then what they said. A watched spot tells you when a hand is raised.",
       "uses": [
@@ -1139,11 +1298,30 @@
         "Text Replacement: 3 rules",
         "Text Filters: Fix OCR mix-ups, Skip chat names, 2 ignored words"
       ],
-      "text_rule_list": [
-        "Kappa \u2192 ha",
-        "PogChamp \u2192 wow",
-        "LUL \u2192 laughing"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "Kappa",
+            "ha"
+          ],
+          [
+            "PogChamp",
+            "wow"
+          ],
+          [
+            "LUL",
+            "laughing"
+          ]
+        ],
+        "ignored_words": [
+          "!commands",
+          "!discord"
+        ],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip chat names"
+        ]
+      },
       "text_rules_note": "Reads the emotes as words and skips the names and the bot commands.",
       "automations_note": "The alert banner is read as soon as it shows. Starts with the streaming program.",
       "uses": [
@@ -1242,10 +1420,22 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups"
       ],
-      "text_rule_list": [
-        "e.g. \u2192 for example",
-        "i.e. \u2192 that is"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "e.g.",
+            "for example"
+          ],
+          [
+            "i.e.",
+            "that is"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups"
+        ]
+      },
       "text_rules_note": "Reads e.g. and i.e. in full.",
       "automations_note": "One hotkey reads the question and then the answer. Turning a card is noticed by itself.",
       "uses": [
@@ -1347,10 +1537,23 @@
         "Text Replacement: 2 rules",
         "Text Filters: Fix OCR mix-ups, Skip gibberish"
       ],
-      "text_rule_list": [
-        "OPTIONS \u2192 options",
-        "EXIT \u2192 exit game"
-      ],
+      "text_rules_detail": {
+        "replacements": [
+          [
+            "OPTIONS",
+            "options"
+          ],
+          [
+            "EXIT",
+            "exit game"
+          ]
+        ],
+        "ignored_words": [],
+        "filters": [
+          "Fix OCR mix-ups",
+          "Skip gibberish"
+        ]
+      },
       "text_rules_note": "Reads the menu words in lower case, and skips letters that are only art.",
       "automations_note": "One hotkey reads the line you are on and its description, in English.",
       "uses": [
