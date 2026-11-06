@@ -8,6 +8,7 @@
       "category": "Other",
       "maker": "defunkt",
       "version": 1,
+      "downloads": 1280,
       "description": "Sample layout (made up). The simplest one: a hotkey that reads whatever you copied.",
       "screen": {
         "width": 1920,
@@ -46,6 +47,7 @@
       "category": "Other",
       "maker": "MertenNor",
       "version": 1,
+      "downloads": 940,
       "description": "Sample layout (made up). One hotkey: press it, drag over some text, hear it.",
       "screen": {
         "width": 1920,
@@ -84,6 +86,7 @@
       "category": "Games",
       "maker": "octocat",
       "version": 1,
+      "downloads": 615,
       "description": "Sample layout (made up). One box over the dialogue at the bottom, one hotkey.",
       "screen": {
         "width": 1920,
@@ -127,6 +130,7 @@
       "category": "Games",
       "maker": "MertenNor",
       "version": 1,
+      "downloads": 502,
       "description": "Sample layout (made up). Two boxes: the dialogue at the bottom, and the menu at the left.",
       "screen": {
         "width": 1920,
@@ -182,6 +186,7 @@
       "category": "Programs",
       "maker": "kentcdodds",
       "version": 1,
+      "downloads": 311,
       "description": "Sample layout (made up). The cell you are in, the formula bar, and a spot you pick yourself.",
       "screen": {
         "width": 1920,
@@ -252,6 +257,7 @@
       "category": "Games",
       "maker": "sindresorhus",
       "version": 1,
+      "downloads": 266,
       "description": "Sample layout (made up). Subtitles at the bottom, read in English whatever language they are in.",
       "screen": {
         "width": 2560,
@@ -310,6 +316,7 @@
       "category": "Games",
       "maker": "addyosmani",
       "version": 2,
+      "downloads": 158,
       "description": "Sample layout (made up). Chat on the left, the name of what you target, and a menu, each with its own voice.",
       "screen": {
         "width": 1920,
@@ -397,6 +404,7 @@
       "category": "Games",
       "maker": "torvalds",
       "version": 1,
+      "downloads": 121,
       "description": "Sample layout (made up). Three boxes, and one combo that reads the title and the text one after the other.",
       "screen": {
         "width": 3840,
@@ -467,6 +475,7 @@
       "category": "Programs",
       "maker": "tj",
       "version": 2,
+      "downloads": 87,
       "description": "Sample layout (made up). Two tabs: one for the chat window, one for the settings window. A combo reads both chat boxes.",
       "screen": {
         "width": 2560,
@@ -550,6 +559,7 @@
       "category": "Games",
       "maker": "gaearon",
       "version": 1,
+      "downloads": 54,
       "description": "Sample layout (made up). Reads a pop-up by itself when it shows up. Starts when the game does.",
       "screen": {
         "width": 2560,
@@ -607,6 +617,7 @@
       "category": "Games",
       "maker": "MertenNor",
       "version": 3,
+      "downloads": 19,
       "description": "Sample layout (made up). Two spots that are watched: a boss name and a loot drop. Each one reads its own box, and one hotkey reads both.",
       "screen": {
         "width": 2560,
@@ -696,6 +707,7 @@
       "category": "Games",
       "maker": "torvalds",
       "version": 4,
+      "downloads": 3,
       "description": "Sample layout (made up). Three tabs, eight boxes, two combos, three watched spots, translation, voices and monitoring that starts with the game.",
       "screen": {
         "width": 3440,
